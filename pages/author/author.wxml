@@ -1,0 +1,49 @@
+<view class='page-body' wx:if="{{pageShow}}">
+  <view class="m-top" hidden='true'>
+    <view class='m-left'>
+      <image src='http://img.yaotia.com/act/arrow.png'></image>资料详情
+    </view>
+  </view>
+  <view class='m-banner'>
+    <image src='{{authorInfo.coverurl}}' mode="{{mode}}"></image>
+  </view>
+  <view class='m-user'>
+    <image src='{{authorInfo.avatar}}' mode="{{mode}}" class='head'></image>
+    <text class='u-title'>{{authorInfo.name}}</text>  
+    <view class='m-fans'>
+      <image src='http://img.yaotia.com/act/fire.png' mode="{{item.mode}}"></image>粉丝 {{authorInfo.fansnum}}</view>
+  </view>
+  <view class='m-author-about'>{{authorInfo.profile}}</view>
+  <view class='m-recommend'>
+    <view class='m-recom-title'>他的作品</view>
+    <view class='m-recommend-con' wx:for='{{authorInfo.booklist}}' wx:key='{{item.bookid}}'  bindtap='jumpUrl' data-url="/pages/details/details?bookid={{item.bookid}}">
+      <view class='m-book'>
+        <image src='{{item.image}}' mode="{{mode}}"></image>
+        <text wx:if="{{item.ishot}}">推荐</text>
+      </view>
+      <view class='m-con'>
+        <view class='u-name'>{{item.name}}</view>
+        <view class='u-about'>
+          <image src='http://img.yaotia.com/act/icon.png'></image>{{item.author.subjectname}}·{{item.author.name}}</view>
+        <view class='u-about'>共{{item.pages}}页 {{item.sellnum}}人已打印</view>
+        <text class="u-link">详情</text>
+      </view>
+    </view>
+    
+  </view>
+  <!-- <view class='m-recommend'>
+    <view class='m-recom-title'>他的课程</view>
+    <view class='m-curriculum-block'>
+      <view class='m-recommend-con m-curriculum'>
+        <view class='m-book'>
+          <image src='http://img.yaotia.com/act/i-book.png' mode="{{item.mode}}"></image>
+        </view>
+        <view class='u-name'>学校应急预案2018</view>
+      </view>
+    </view>
+  </view> -->
+  <view class='m-follow' bindtap='doFollow'>
+    <image wx:if='{{authorInfo.isfollow==0}}' src='http://img.yaotia.com/act/i-add.png' mode="{{mode}}"></image>{{authorInfo.isfollow==0?'关注':'已关注'}}
+  </view>
+</view>
+<signup show="{{showSignUp}}" successcb="{{signupcb}}"></signup>

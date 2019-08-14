@@ -1,0 +1,94 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<view class='g-header'>
+  <view class="m-top" hidden='true'>
+    <view class='m-left'>
+      <image src='http://img.yaotia.com/act/arrow.png'></image>查看订单
+    </view>
+  </view>
+</view>
+<view class='m-recommend-con' wx:for="{{data.books}}" wx:key="1" data-bookid="{{item.bookid}}" data-booknum="{{item.booknum}}">
+  <view class='m-book'>
+    <image src='{{item.bookimage}}' mode="{{item.mode}}"></image>
+  </view>
+  <view class='m-con'>
+    <view class='u-name'>{{item.bookname}}</view>
+    <view class='u-about'>订单号：{{data.orderno}}
+      <text class='u-copy' bindtap='copy'>复制</text>
+    </view>
+  </view>
+</view>
+<view class='m-logistics'>
+  <text class='u-ems'>物流承运：{{data.shippingcom}} / {{data.shippingno}}</text>
+  <view class='m-logistics-block'>
+    <view wx:if="{{_printing == 0}}">
+      <image src='http://img.yaotia.com/act/step1-state1.png'></image>
+      <text class='u-text'>打印资料</text>
+    </view>
+    <view wx:if="{{_printing == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step1-state2.gif'></image>
+      <text class='u-text'>打印中</text>
+    </view>
+    <view wx:if="{{_printing == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step1-state3.png'></image>
+      <text class='u-text'>打印完成</text>
+    </view>
+    <view wx:if="{{_transported == 0}}">
+      <image src='http://img.yaotia.com/act/step2-state1.png'></image>
+      <text class='u-text'>等待运输</text>
+    </view>
+    <view wx:if="{{_transported == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step2-state2.gif'></image>
+      <text class='u-text'>运输中</text>
+    </view>
+    <view wx:if="{{_transported == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step2-state3.png'></image>
+      <text class='u-text'>运输完成</text>
+    </view>
+    <view wx:if="{{_distribution == 0}}">
+      <image src='http://img.yaotia.com/act/step3-state1.png'></image>
+      <text class='u-text'>等待派送</text>
+    </view>
+    <view wx:if="{{_distribution == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step3-state2.gif'></image>
+      <text class='u-text'>正在派送</text>
+    </view>
+    <view wx:if="{{_distribution == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step3-state3.png'></image>
+      <text class='u-text'>派送完成</text>
+    </view>
+    <view wx:if="{{_collect == 0}}">
+      <image src='http://img.yaotia.com/act/step4-state1.png'></image>
+      <text class='u-text'>待收包裹</text>
+    </view>
+    <view wx:if="{{_collect == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step4-state2.gif'></image>
+      <text class='u-text'>待收包裹</text>
+    </view>
+    <view wx:if="{{_collect == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step4-state3.png'></image>
+      <text class='u-text'>订单已完成</text>
+    </view>
+  </view>
+</view>
+<view class='m-address'>
+  <image src='http://img.yaotia.com/act/location.png'></image>
+  <text>收货地址：{{data.orderaddress}}</text>
+</view>
+<view class='m-trip'>
+  <view wx:for="{{data.shippingdata}}" wx:if="{{_state==1}}" class="m-trip-list {{index==0 ? 'completed' : ''}} " wx:key="1">
+    <text class='u-spot'></text>
+    <view class='m-time'>{{item.date}}
+      <text>{{item.time}}</text>
+    </view>
+    <text class='r-text'>{{item.context}}</text>
+  </view>
+  <view wx:for="{{shippingdata}}" wx:if="{{_state==0}}" class="m-trip-list {{index==0 ? 'completed' : ''}} " wx:key="1">
+    <text class='u-spot'></text>
+    <view class='m-time'>{{item.date}}
+      <text>{{item.time}}</text>
+    </view>
+    <text class='r-text'>{{item.context}}</text>
+  </view>
+</view>
+<view class='u-detailed' wx:if="{{_state==0}}" bindtap='details'>查看详细物流信息</view>

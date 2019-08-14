@@ -1,0 +1,13 @@
+/* pages/list/list.wxss */
+.m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.m-address{margin: 40rpx 60rpx 0;}
+.m-address text{display: block;}
+.u-red{color: #ff7133;font-size: 26rpx;margin-bottom: 20rpx;}
+.u-telephone{font-size: 60rpx;color: #333333;font-weight: bold; margin-bottom: 30rpx;}
+.u-name{color: #333333;font-size: 24rpx;}
+.u-address{color: #6c6c6c;font-size: 24rpx;}
+.m-btn{text-align: center;margin-top: 390rpx;}
+.m-btn text{display: inline-block;width: 240rpx;height: 68rpx; text-align: center; line-height: 68rpx; color: #666666;font-size: 26rpx;border:1px solid #e5e5e5;border-radius: 50rpx;margin: 0 65rpx;}
+.m-btn .u-green{background: #5acc82;color: #fff;border: 1px solid #5acc82;}

@@ -1,0 +1,79 @@
+<scroll-view class='addrpicker-box' scroll-y='true'>
+  <view class='address-list' hidden='{{!showList}}'>
+    <view class='g-header' hidden='true'>
+      <view class="m-top">
+        <view class='m-left'>
+          <image src='http://img.yaotia.com/act/arrow.png'></image>收货地址
+        </view>
+      </view>
+    </view>
+    <radio-group>
+      <view wx:for="{{addrList}}" wx:key="{{item.addressid}}" class="m-defaultAddress {{item.addressid==addrid?'':'m-white'}}" data-addrid='{{item.addressid}}' data-index='{{index}}' bindtap='pickAddr'>
+        <label class="radio">
+          <view class='u-name'>{{item.name}}
+            <text wx:if="{{item.isdefault==1}}" class='u-default'>默认</text>
+            <image src='http://img.yaotia.com/act/del.png' catchtap='removeAddr' data-index='{{index}}'></image>
+          </view>
+          <view class='u-text'>
+            <!-- <radio wx:if="{{ispick}}"></radio> -->
+            {{item.province}}{{item.city}}{{item.district}}{{item.address}}</view>
+          <text class='u-text'>电话：{{item.mobile}}</text>
+          <view class='m-fun'>
+            <text catchtap='showEdit' data-index='{{index}}'>修改</text>
+            <view wx:if="{{item.isdefault!=1}}" class='m-btn-default' data-index='{{index}}' catchtap='setDefault'>设为默认</view>
+          </view>
+        </label>
+      </view>
+    </radio-group>
+    <view class='m-user' wx:if="{{addrList.length==0}}">
+      <image src='http://img.yaotia.com/act/location.png'></image>
+      <text>主银，您的东东要寄送到哪里呢？\n填写地址，做好收货准备吧！</text>
+    </view>
+    <view class='m-btn1' bindtap='showEdit'>添加一个新地址</view>
+  </view>
+  <view class='address-edit' hidden='{{showList}}'>
+    <view class='m-address'>
+      <image src='http://img.yaotia.com/act/location.png'></image>收货地址填写
+      <text>地址仅用于快递物流发货只用</text>
+      <view class='hide-btn' bindtap='hideEdit'>返回地址列表</view>
+    </view>
+    <view class='m-list'>
+      <text>姓名</text>
+      <input value="{{editAddress?editAddress.name:''}}" placeholder-class="phcolor" placeholder="请填写收货人姓名" bindinput='inputName' />
+    </view>
+    <view class='m-list'>
+      <text>手机号码</text>
+      <input value="{{editAddress?editAddress.mobile:''}}" placeholder-class="phcolor" placeholder="请填写收货人手机号码" bindinput='inputMobile' />
+    </view>
+    <view class='m-list'>
+      <text>省份</text>
+      <picker mode="selector" range="{{provinceList}}" range-key="name" bindchange='pickProvince'>
+        <view wx:if="{{!editAddress.provinceid}}" class='u-text'>请选择省份</view>
+        <view class='u-con' wx:else>{{editAddress.province?editAddress.province:editAddress.city}}</view>
+      </picker>
+    </view>
+    <view class='m-list'>
+      <text>城市</text>
+      <picker mode="selector" range="{{cityList}}" range-key="name" bindchange='pickCity'>
+        <view wx:if="{{!editAddress.city}}" class='u-text'>请选择城市</view>
+        <view class='u-con' wx:else>{{editAddress.city}}</view>
+      </picker>
+    </view>
+    <view class='m-list'>
+      <text>区县</text>
+      <picker mode="selector" range="{{districtList}}" range-key="name" bindchange='pickDistrict'>
+        <view wx:if="{{!editAddress.district}}" class='u-text'>请选择区县</view>
+        <view class='u-con' wx:else>{{editAddress.district}}</view>
+      </picker>
+    </view>
+    <view class='m-list'>
+      <text>街道地址</text>
+      <input value="{{editAddress?editAddress.address:''}}" placeholder-class="phcolor" placeholder="请填写详细地址" bindinput='inputAddress' />
+    </view>
+    <view class='m-radio'>
+      <label class="radio">
+        <switch class='wx-switch-input' checked="{{editAddress.isdefault==1}}" bindchange='changeDefault' />设为默认地址</label>
+    </view>
+    <view class='m-btn' bindtap='saveAddr'>保存地址</view>
+  </view>
+</scroll-view>

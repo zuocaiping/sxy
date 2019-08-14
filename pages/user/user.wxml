@@ -1,0 +1,89 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<view class='g-header'>
+  <!-- <view class="m-top">
+    <view class='m-left'>
+      <image src='http://img.yaotia.com/act/arrow.png'></image>资料评价
+    </view>
+  </view> -->
+  <view class='m-menu-list'>
+    <text class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id="0" data-id="0" bindtap="tab">待评价</text>
+    <text class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="1" data-id="1" bindtap="tab">已评价</text>
+  </view>
+  <view class='m-change'></view>
+</view>
+<view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+
+  <view class='m-recommend' wx:for="{{waitinglist}}" wx:key="1">
+    <view class='m-recommend-con'>
+      <view class='m-book'>
+        <image src='{{item.bookimage}}' mode="{{item.mode}}"></image>
+      </view>
+      <view class='m-con'>
+        <text class='u-name'>{{item.bookname}}</text>
+        <text class='u-about'>{{item.pages}}</text>
+      </view>
+    </view>
+    <view class='m-comment'>
+      <!-- <navigator url='/pages/comment/comment?bookid={{item.bookid}}&orderid={{orderid}}'> -->
+      <view class='u-evaluate' bindtap='Fill_comments' data-index="{{item}}" data-eq="{{index}}">填写评价</view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+
+  <view class='m-prompt' wx:if="{{waitinglist==''}}">
+    <image src='http://img.yaotia.com/act/noContent1.png'></image>
+    <text>暂无订单</text>
+  </view>
+
+</view>
+<view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+  <view class='m-recommend' wx:for="{{commentedlist}}" wx:key="1">
+    <view class='m-recommend-con'>
+      <view class='m-book'>
+        <image src='{{item.bookimage}}' mode="{{item.mode}}"></image>
+      </view>
+      <view class='m-con'>
+        <text class='u-name'>{{item.bookname}}</text>
+        <text class='u-about'>{{item.pages}}</text>
+      </view>
+    </view>
+    <view class='m-comment'>
+      <image src='http://img.yaotia.com/act/comment.png'></image>
+      <view>{{item.comment}}</view>
+    </view>
+  </view>
+  <view class='m-prompt' wx:if="{{commentedlist==''}}">
+      <image src='http://img.yaotia.com/act/noContent1.png'></image>
+      <text>暂无评价</text>
+    </view>
+</view>
+<!--我的订单——评价-->
+<view class='redpack' wx:if='{{ishide}}' bindtap='hidePack'>
+</view>
+<view class='g-bc' wx:if='{{ishide}}'>
+  <view class="m-top">
+    <view class='m-left'>
+      资料评价
+    </view>
+  </view>
+  <view class='m-recommend'>
+    <view class='m-recommend-con'>
+      <view class='m-book'>
+        <image src='{{index.bookimage}}' mode="{{item.mode}}"></image>
+      </view>
+      <view class='m-con'>
+        <text class='u-name'>{{index.bookname}}</text>
+        <text class='u-about'>{{index.pages}}</text>
+      </view>
+    </view>
+    <form bindsubmit="formSubmit">
+      <view class='m-textarea'>
+        <textarea bindinput="bindTextAreaBlur" placeholder="分享学习感受" value="{{ceshi}}" />
+      </view>
+      <view class='m-btn' bindtap='fun_comment' formType="submit">提交评价</view>
+    </form>
+  </view>
+</view>
+
+<!--我的订单-->

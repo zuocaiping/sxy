@@ -1,0 +1,10 @@
+<view class='m-address'>
+  <text class='u-red'>请确认收货地址是否正确</text>
+  <text class='u-telephone'>{{orderAddr.mobile}}</text>
+  <text class='u-name'>{{orderAddr.name}}</text>
+  <text class='u-address'>{{orderAddrStr}}</text>
+</view>
+<view class='m-btn'>
+  <text bindtap='changeAddr'>修改地址</text>
+  <text class='u-green' bindtap='skip'>就寄这里</text>
+</view>

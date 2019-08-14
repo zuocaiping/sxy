@@ -1,0 +1,40 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<view wx:if="{{pageShow==false}}" class='m-loading'>正在加载数据...</view>
+<view wx:if="{{pageShow}}">
+  <view class='g-header' hidden='true'>
+    <view class="m-top">
+      <view class='m-left'>
+        <image src='http://img.yaotia.com/act/arrow.png'></image>我的收藏
+      </view>
+    </view>
+  </view>
+  <view class='m-menu-list'>
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%" bindtap="tapMove">
+      <text class="{{currentTab ==-1 ? 'active' : ''}}" data-idx="{{index}}" bindtap="tab">全部</text>
+      <text class="{{currentTab==index ? 'active' : ''}}" data-idx="{{index}}" wx:for="{{categories}}" wx:key='1' data-categoryid="{{item.categoryid}}" bindtap="tab">{{item.categoryname}}</text>
+    </scroll-view>
+  </view>
+  <view class='m-change'></view>  
+  <view class='m-recommend-con' wx:for="{{bookList}}" wx:key="unique" bindtap='jumpUrl' data-id='{{item.bookid}}' >
+    <view class='m-book' data-bookid="{{item.bookid}}" data-authorid="{{item.author.authorid}}">
+      <image src='{{item.image}}' mode="{{item.mode}}"></image>
+      <text wx:if="{{item.ishot==1}}">推荐</text>
+    </view>
+    <view class='m-con'>
+      <view class='u-name'>{{item.name}}
+        <image src='http://img.yaotia.com/act/del2.png' catchtap='removeCollect' data-index='{{index}}'></image>
+      </view>
+      <view class='u-about'>
+        <image src='http://img.yaotia.com/act/icon.png'></image>{{item.author.subjectname}}·{{item.author.name}}</view>
+      <view class='u-about'>共{{item.pages}}页 {{item.sellnum}}人已打印</view>
+    </view>
+  </view>
+
+  <!-- <view wx:if='{{bookList==""}}' class='m-empty'><image src='http://img.yaotia.com/act/default_image_noshopping.png'></image></view> -->
+  <view class='m-prompt' wx:if="{{bookList==''}}">
+        <image src='http://img.yaotia.com/act/noContent3.png'></image>
+        <text>暂无收藏</text>
+      </view>
+  <signup show="{{showSignUp}}" successcb="{{signupcb}}" force="{{forceSignUp}}"></signup>
+</view>

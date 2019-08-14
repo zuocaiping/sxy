@@ -1,0 +1,59 @@
+/* pages/share/share.wxss */
+.body-page{background: #f8c43a;padding-bottom:40rpx;}
+.m-banner1{background: #efefef;width: 100%; position: relative;}
+.m-banner1 image{width: 100%; height: 480rpx;}
+.m-banner1 text{font-size: 26rpx;font-weight: bold;line-height: 48rpx;color: #5b5a58; position: absolute;left:420rpx;top:180rpx;}
+.m-banner{background: url(http://img.yaotia.com/act/share_img1.jpg);height:400rpx ;background-size: 100%;position: relative;}
+.m-text{height: 80rpx;width:100%;background-color:rgba(0,0,0,0.6);position: absolute;bottom: 0;left: 0;color: #fff;font-size: 24rpx;line-height: 80rpx;padding:0 36rpx;}
+.m-text text{color: #fec848;}
+.m-text navigator{display: inline-block;}
+.m-new{background: #fcf3e1;height: 175rpx;position: relative;padding-left: 240rpx;}
+.m-new image{width: 119rpx;height: 120rpx;position: absolute;left: 68rpx;top:24rpx;border-radius: 50%;}
+.m-new-text{font-size: 22rpx;color: #cfb98c;padding-top:26rpx;}
+.m-new-text text{font-size: 24rpx;color: #512f25; font-weight: bold; display: block;margin-top: 18rpx;line-height: 36rpx;}
+.m-data image{width: 145rpx;height: 183rpx; float: left;margin-right: 25rpx;}
+.m-data{overflow: hidden;margin-bottom:33rpx; position: relative;height: 26rpx;background: url(http://img.yaotia.com/act/share_img2.jpg) repeat-x #fcf3e1 0 bottom;background-size:25%; }
+/* .m-data{overflow: hidden;margin-bottom:33rpx; position: relative;height: 268rpx;background: url(http://img.yaotia.com/act/share_img2.jpg) repeat-x #fcf3e1 0 bottom;background-size:25%; } */
+.m-data text{float: left;border-right:2rpx solid #cbcbcb;border-left:2rpx solid #cbcbcb;width: 25rpx;padding:0 20rpx; display: block;font-size: 28rpx;line-height: 46rpx; color: #989898;margin: 0 28rpx;}
+.m-img{width: 1179rpx;padding:32rpx 0 0 27rpx;}
+.m-title{background: url(http://img.yaotia.com/act/share_img8.png);height: 113rpx;background-size:100%;color: #fff;font-size: 32rpx;font-weight: bold;line-height: 86rpx; text-align: center;}
+/* .m-content{background: url(http://img.yaotia.com/act/share_img5.png) 0 328rpx no-repeat;background-size:100%;} */
+.m-envelopes{background: url(http://img.booktopaper.com/mini/share_img6.png?v=3);background-size:100%;width: 685rpx;height: 237rpx;margin:9rpx auto 30rpx; position: relative;}
+/* .m-bottom{background: url(http://img.yaotia.com/act/share_img4.png) no-repeat;width:100%;background-size:100%;height: 254rpx; z-index: -1;margin-top: -142rpx;} */
+.m-friends{background: #fff;border-radius: 20rpx;border:1px solid #0a0000;border-bottom:12rpx solid #0a0000;margin: 0 36rpx;padding: 46rpx 80rpx 190rpx;}
+.m-friends .u-title{color: #a09494;font-size: 24rpx; display: block;text-align: center;margin-bottom:48rpx;}
+.m-list{display: flex;margin-bottom:48rpx;}
+.m-list text{display: block;}
+.m-list image{width: 80rpx;height: 80rpx; display: inline-block;border-radius: 50%;}
+.m-list .u-phone{font-size: 28rpx;color: #333333;font-weight: bold;margin-left: -60rpx;margin-top:5rpx;}
+.m-list .u-time{font-size: 20rpx;color: #333333;margin-left: -60rpx;}
+.u-flex{flex: 1;}
+.u-flex .u-pags{font-size: 24rpx;color: #ff0000;font-weight: bold; float: right;margin-top: 22rpx;}
+.m-ewm{width: 534rpx;height: 627rpx;background: url(http://img.yaotia.com/act/share_img7.png) no-repeat;background-size:100%;margin:-54rpx auto 0; z-index: 2; position: relative;}
+.m-printing{font-size: 24rpx;color: #ff0005;font-weight: bold;margin: 40rpx 80rpx 0 46rpx; display: inline-block; text-align: center;}
+.m-printing text{display: block;color: #000;font-weight:normal;}
+.m-printing .u-number{font-size:80rpx;color: #ff0005;display: inline-block;font-weight: bold; }
+.m-overdue{color: #000000;font-size: 24rpx;display: inline-block;margin-top: 80rpx; vertical-align: top;}
+.m-overdue text{display: block;font-size: 20rpx;margin-top: 8rpx;color: #a6a6a6;}
+.m-envelopes navigator{width: 234rpx;height: 76rpx; position: absolute;right: 22rpx;top:76rpx;border-radius: 40rpx;}
+.m-printing1{text-align: center;width: 100%;}
+.m-printing1 text{font-size: 26rpx;color: #7d631e;}
+.m-printing1 .u-btn{width: 534rpx;height: 84rpx;border:8rpx solid #ddaf34;border-radius: 20rpx;margin:32rpx auto 56rpx;}
+.m-printing1 .u-btn text{background: #ff4d16;width: 100%;height: 100%;border-radius: 15rpx;font-size: 32rpx;color: #fff;text-align: center;line-height: 84rpx;font-weight: normal; display: block;}
+
+/*红包弹框*/
+.modal-box{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0%;
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;z-index: 1000;
+  }
+
+.modal-envelopes{
+  position:fixed;background: url(http://img.yaotia.com/act/envelopes.png);width: 428rpx;height: 394rpx;background-size: 100%;text-align: center;font-size: 100rpx; color: #fd3331;padding-top:108rpx;left: 50%;margin-left:-214rpx;top:30%;}
+.modal-envelopes text{font-size: 24rpx;color: #fd3331; display: block;}
+.modal-envelopes .u-btn{width: 240rpx;height: 60rpx;background: #faeb48; border-radius: 330rpx;text-align: center; line-height: 60rpx;font-size: 26rpx;color: #202020;margin: 108rpx auto 0;}
+.modal-envelopes text.u-ye{display: inline-block;}
+.modal-envelopes text.u-text{color: #fff;font-size: 26rpx;margin: 118rpx auto 0;}

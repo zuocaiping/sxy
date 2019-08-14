@@ -1,0 +1,10 @@
+ .g-page{background: url(http://img.yaotia.com/act/guideMap2.jpg);background-size:100%;width: 100%;height: 100%;position: fixed;top:0;left: 0;z-index: 100;transition: opacity 6s; }
+.g-page image{width: 100%;height: 685rpx; position: absolute;bottom: 0;left: 0;opacity: 0;transition: opacity 0.3s linear 0.3s;
+}
+ .g-page image.Action {  opacity: 1;} 
+.dialog-border {
+height: 220rpx;padding: 0 80rpx;
+  width: 100%;box-sizing: border-box;position: absolute;
+  bottom:44rpx;right:10rpx; z-index: 10;font-size: 32rpx;color: #3f74b6; line-height: 38rpx;}
+.dialog-border button{width: 207rpx;height: 61rpx;font-size: 30rpx; line-height: 61rpx;color: #222;background: url(http://img.yaotia.com/act/btn.png) #fff;background-size: 100%; float: right;margin-top:24rpx;border-radius: 40rpx;position: absolute;bottom: 0rpx;right: 36rpx;}
+.dialog-border button:active{background:url(http://img.yaotia.com/act/btn-pink.png) #fff;background-size: 100%; } 

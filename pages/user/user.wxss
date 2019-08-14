@@ -1,0 +1,50 @@
+/* pages/list/list.wxss */
+page{background: #ebeeef;}
+.g-header{background: #fff;}
+.m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.u-bold{font-weight: bold;color: #ec2c2c;}
+.u-receive{ font-weight: normal; color: #cecece;font-size: 25rpx;text-decoration: underline;}
+.m-search{position: absolute;right:12rpx;font-size:24rpx; line-height: 58rpx; color:#999;width: 254rpx;border-radius:40rpx;height: 58rpx;background: #f7f7f7;top:0;padding:0 15rpx 0 60rpx;}
+.m-search image{width: 24rpx;height: 24rpx;position: absolute;top:50%;margin-top:-12rpx;left:17rpx;}
+
+.m-book{border-radius: 20rpx; float: left;margin:0 30rpx 0 0rpx; position: relative; }
+.m-book image{width:130rpx;height: 122rpx; margin: 10rpx auto 0; display: block;}
+.m-book text{width:50rpx;height: 50rpx;border-radius: 50%;text-align: center;line-height: 50rpx;font-size: 16rpx;color: #fff; position: absolute;right:24rpx;top:-25rpx; display: block;background: #fdb73c;}
+.right-item{display: none;}
+.right-item.active{display: block;}
+.m-recommend{padding: 40rpx 40rpx 0;background: #fff;margin-bottom:20rpx;padding-bottom: 30rpx; overflow: hidden;}
+.m-recommend-con{display: flex;margin-bottom: 30rpx;}
+.m-comment{font-size: 24rpx; color: #666666; line-height: 32rpx;border-top:1px solid #f0f0f0;padding-top:26rpx; position: relative;}
+.m-comment image{width: 32rpx;height: 31rpx;margin: 5rpx 10rpx 0 0; vertical-align: top; position: absolute;}
+.m-comment view{margin-left:50rpx; display: inline-block; }
+.m-comment text{color: #519b61;margin-left: 10rpx;}
+.m-con{flex: 1;margin-right: 30rpx;}
+.m-con text{display: block;}
+.u-name{font-size: 40rpx; color: #333;margin-bottom: 12rpx;}
+.u-about{font-size: 30rpx; line-height: 32rpx;color: #b0afaf;margin-bottom: 20rpx;}
+.u-author{font-size: 30rpx; color: #262626;margin-bottom: 18rpx;}
+.u-author image{width: 53rpx;height: 49rpx; vertical-align: top;margin: -2rpx 0 0 -15rpx;}
+.u-link{width:130rpx;height: 53rpx;border-radius: 50rpx;background: #5acc82; text-align: center; line-height: 53rpx;color: #fff;font-size: 26rpx;font-weight: bold;}
+.m-tab-title{display: flex;padding: 20rpx 0 10rpx;}
+.m-tab-title view{flex: 1;text-align: center;font-size: 30rpx;color: #767676; line-height: 50rpx;position: relative;}
+.m-tab-title .u-new{width: 30rpx;height: 30rpx; font-size: 20rpx; color: #fff;border:2rpx solid #fff;border-radius: 50%;display: inline-block;position: absolute;background: #ef1d1d;font-weight: bold;line-height: 30rpx;top:-10rpx;left:50%;margin-left: 5rpx;}
+.m-tab-title image{width: 58rpx;height: 58rpx; display: block;margin: 0 auto;}
+
+.m-menu-list{ text-align: left;padding-left: 20rpx;}
+.m-menu-list text{font-size: 28rpx; color: #989898;margin: 0 15rpx;padding: 0 10rpx; display: inline-block;  line-height: 76rpx; text-align: center;}
+.m-menu-list .active{border-bottom: 4rpx solid #242424;color: #333333;}
+.m-change{background-image: -webkit-linear-gradient(top, #f6f6f6, #fff);height: 15rpx; }
+.m-comment .u-evaluate{width: 182rpx;height: 68rpx; border-radius: 50rpx;border:1px solid #e6e6e6;font-size: 26rpx; color: #666666; text-align: center; line-height: 68rpx;float: right;}
+/**我的订单——评价**/
+.redpack{position: fixed;width: 100%;height: 100%;left: 0;top: 0; background-color: rgba(0, 0, 0, 0.5);z-index: 500;}
+
+.g-bc{background: #fff; position: fixed;top: 10%;padding-top:30rpx;left: 50%;margin-left: -359rpx; z-index: 2000;}
+.m-textarea textarea{height: 220rpx;padding: 20rpx;margin:0;border: 1px solid #e6e6e6;background: #fbfbfb;border-radius: 20rpx;display: block;width: 100%;box-sizing: border-box;font-size: 28rpx;color: #b2b2b2;line-height: 40rpx;}
+.m-btn{width: 636rpx;height: 90rpx;border-radius: 40rpx;background: #5acc82;font-size: 38rpx; font-weight: bold; text-align: center; line-height: 90rpx; color: #fff; margin: 176rpx auto 0;}
+
+/**暂无订单**/
+.m-prompt{background: #fff;padding:200rpx 0 300rpx;}
+.m-prompt image{width: 304rpx;height: 210rpx;margin: 100rpx auto 50rpx; display: block}
+.m-prompt text{ display: block;text-align: center;line-height: 30rpx;font-size: 30rpx; color: #666;}

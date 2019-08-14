@@ -1,0 +1,32 @@
+<view class='m-signin'>
+  <image src='http://img.yaotia.com/act/logo.png'></image>
+  <image wx:if="{{page==1}}" src='http://img.booktopaper.com/mini/icon-14.png'></image>
+</view>
+<view class='m-btn green' wx:if="{{page==1}}">
+  <button type="primary" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber"  bindtap='showLoading'>微信快速登录</button>
+</view>
+<view class='m-btn' wx:if="{{page==1}}">
+  <image src='http://img.booktopaper.com/mini/icon-13.png'></image>
+  <button type="gray" bindtap='toMoibleLogin'>使用手机登录</button>
+</view>
+<view class='m-conter' wx:if="{{page==2}}">
+  <view class='m-input'>
+    <image src='http://img.booktopaper.com/mini/icon-12.png'></image>
+    <input bindinput='inputMobile' placeholder="请输入手机号码" />
+  </view>
+  <view class='m-input u-yzm'>
+    <image src='http://img.booktopaper.com/mini/icon-11.png'></image>
+    <view wx:if="{{sendSmsStep==1||sendSmsStep==3}}" class='m-yzm-green' bindtap='getSmsCode'>{{sendSmsStep==1?'获取验证码':'重新获验证码'}}</view>
+    <view wx:else class='m-yzm'>50S后可重试</view>
+    <input placeholder="请输入验证码" />    
+  </view>
+</view>
+<view class='m-btn green' wx:if="{{page==2}}">
+  <button type="primary"> 立即登录 </button>
+</view>
+<view class='m-wx' wx:if="{{page==2}}">
+  <button type="default"  bindtap='showLoading' open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
+    <view>
+      <image src='http://img.booktopaper.com/mini/icon-14.png'></image>
+    </view>微信快速授权登录</button>
+</view>

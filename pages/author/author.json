@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "作者资料",
+  "usingComponents": {
+    "signup": "../../../components/signup/signup"
+  }
+}

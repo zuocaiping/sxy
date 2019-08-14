@@ -1,0 +1,39 @@
+<!-- <view class="m-top">
+  <view class='m-left'>
+    <image src='http://img.yaotia.com/act/arrow.png'></image>打印订单确认
+  </view>
+</view> -->
+<view class='m-printing'>
+  <image src='http://img.yaotia.com/act/printing.png'></image>
+  <text>打印机里空空如也</text>
+  <!-- <navigator url='/pages/list/list?categoryid=1'>
+    <view class='m-btn'>去找资料</view>
+  </navigator> -->
+  <navigator url='/pages/guideMap/guideMap'>
+    <view class='m-btn'>去找资料</view>
+  </navigator>
+</view>
+<!-- <view class='m-title'>
+  <text>您可能想打印</text>
+</view>
+<view class='m-recommend' wx:for="{{data.list}}" wx:key="1">
+  <view class='m-recommend-con'>
+    <navigator hover-class="none" url='/pages/details/details?bookid={{item.bookid}}'>
+      <view class='m-book'>
+        <image src='{{item.image}}' mode="{{item.mode}}"></image>
+        <text wx:if="{{item.ishot==1}}">推荐</text>
+      </view>
+    </navigator>
+    <view class='m-con'>
+      <navigator hover-class="none" url='/pages/details/details?bookid={{item.bookid}}'>
+        <text class='u-name'>{{item.name}}</text>
+        <text class='u-about'>{{item.profile}}</text>
+      </navigator>
+      <view class='u-author'>
+        <image src='http://img.yaotia.com/act/i-icon0.png'></image>编：{{item.author.subjectname}}·{{item.author.name}} </view>
+      <navigator hover-class="none" url='/pages/details/details?bookid={{item.bookid}}'>
+        <text class="u-link">详情</text>
+      </navigator>
+    </view>
+  </view>
+</view> -->

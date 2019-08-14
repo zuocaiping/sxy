@@ -1,0 +1,44 @@
+<view class='address-edit' hidden='{{showList}}'>
+    <view class='m-address'>
+      <image src='http://img.yaotia.com/act/location.png'></image>收货地址填写
+      <text>地址仅用于快递物流发货之用</text>      
+    </view>
+    <view class='m-list'>
+      <text>姓名</text>
+      <input value="{{editAddress?editAddress.name:''}}" placeholder-class="phcolor" placeholder="请填写收货人姓名" bindinput='inputName' />
+    </view>
+    <view class='m-list'>
+      <text>手机号码</text>
+      <input value="{{editAddress?editAddress.mobile:''}}" placeholder-class="phcolor" placeholder="请填写收货人手机号码" bindinput='inputMobile' />
+    </view>
+    <view class='m-list'>
+      <text>省份</text>
+      <picker mode="selector" range="{{provinceList}}" range-key="name" bindchange='pickProvince'>
+        <view wx:if="{{!editAddress.provinceid}}" class='u-text'>请选择省份</view>
+        <view class='u-con' wx:else>{{editAddress.province?editAddress.province:editAddress.city}}</view>
+      </picker>
+    </view>
+    <view class='m-list'>
+      <text>城市</text>
+      <picker mode="selector" range="{{cityList}}" range-key="name" bindchange='pickCity'>
+        <view wx:if="{{!editAddress.city}}" class='u-text'>请选择城市</view>
+        <view class='u-con' wx:else>{{editAddress.city}}</view>
+      </picker>
+    </view>
+    <view class='m-list'>
+      <text>区县</text>
+      <picker mode="selector" range="{{districtList}}" range-key="name" bindchange='pickDistrict'>
+        <view wx:if="{{!editAddress.district}}" class='u-text'>请选择区县</view>
+        <view class='u-con' wx:else>{{editAddress.district}}</view>
+      </picker>
+    </view>
+    <view class='m-list'>
+      <text>街道地址</text>
+      <input value="{{editAddress?editAddress.address:''}}" placeholder-class="phcolor" placeholder="请填写详细地址" bindinput='inputAddress' />
+    </view>
+    <view class='m-radio' wx:if="{{!isChangeAddr}}">
+      <label class="radio">
+        <switch class='wx-switch-input' checked="{{editAddress.isdefault==1}}" bindchange='changeDefault' />设为默认地址</label>
+    </view>
+    <view class='m-btn' bindtap='saveAddr'>{{fromOrder?'保存并保用地址':'保存地址'}}</view>
+  </view>

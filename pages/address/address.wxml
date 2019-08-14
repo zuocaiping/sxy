@@ -1,0 +1,53 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<view class='g-header'>
+  <view class="m-top">
+    <view class='m-left'>
+      <image src='http://img.yaotia.com/act/arrow.png'></image>收货地址
+    </view>
+  </view>
+</view>
+<view class='m-address'>
+  <label class="radio">
+    <view class='u-name'>张三
+      <text class='u-default'>默认</text>
+      <image src='http://img.yaotia.com/act/del.png'></image>
+    </view>
+    <view class='u-text'>
+      <radio/>湖南省长沙市雨花区雨花亭韶山南路49号华锦小区4栋</view>
+    <text class='u-text'>电话：18692272863</text>
+    <view class='m-fun'>
+      修改
+      <view class='m-btn-default'>设为默认</view>
+    </view>
+  </label>
+</view>
+<view class='m-address m-white'>
+  <label class="radio">
+    <view class='u-name'>张三
+      <image src='http://img.yaotia.com/act/del.png'></image>
+    </view>
+    <view class='u-text'>
+      <radio/>湖南省长沙市雨花区雨花亭韶山南路49号华锦小区4栋</view>
+    <text class='u-text'>电话：18692272863</text>
+    <view class='m-fun' style='display:none;'>
+      修改
+      <view class='m-btn-default'>设为默认</view>
+    </view>
+  </label>
+</view>
+<view class='m-address m-white'>
+  <label class="radio">
+    <view class='u-name'>张三
+      <image src='http://img.yaotia.com/act/del.png'></image>
+    </view>
+    <view class='u-text'>
+      <radio/>湖南省长沙市雨花区雨花亭韶山南路49号华锦小区4栋</view>
+    <text class='u-text'>电话：18692272863</text>
+    <view class='m-fun' style='display:none;'>
+      修改
+      <view class='m-btn-default'>设为默认</view>
+    </view>
+  </label>
+</view>
+<view class='m-btn'>添加一个新地址</view>

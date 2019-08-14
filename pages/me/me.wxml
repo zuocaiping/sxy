@@ -1,0 +1,84 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<view class='page-body' wx:if="{{pageShow}}">
+  <view class='g-header' hidden='true'>
+    <view class="m-top">
+      <view class='m-left'>
+        <image src='http://img.yaotia.com/act/arrow.png'></image>我的
+      </view>
+    </view>
+  </view>
+  <view class='m-user'>
+    <image src='{{pageData.avatar}}'></image>
+    <text class='u-name'>{{pageData.username}}</text>
+    <text class='u-id'>ID {{pageData.showUserId}}</text>
+    <view>免费打印：
+      <text>{{pageData.freepage}}</text> 页</view>
+    <view class='m-btn' bindtap='logout'>退出</view>
+  </view>
+
+
+  
+
+
+  <view class='m-list'>
+    <navigator hover-class="none"  url='/pages/myAddress/myAddress'>
+      <image src='http://img.yaotia.com/act/user-icon1.png?v=1'></image>地址管理
+      <image src='http://img.yaotia.com/act/icon-8.png' class='u-arrow'></image>
+    </navigator>
+  </view>
+  <view class='m-list'>
+    <navigator hover-class="none"  url='/pages/collection/collection'>
+      <image src='http://img.yaotia.com/act/user-icon2.png?v=1'></image>我的收藏
+      <image src='http://img.yaotia.com/act/icon-8.png' class='u-arrow'></image>
+    </navigator>
+  </view>
+  <view class='m-list'>
+  <navigator hover-class="none"  url='/pages/coupon/coupon?type=1'>
+    <image src='http://img.yaotia.com/act/user-icon3.png?v=1'></image>我的优惠券
+    <image src='http://img.yaotia.com/act/icon-8.png' class='u-arrow'></image>
+    </navigator>
+  </view>
+  <view class='m-list'>
+    <button open-type='contact' class='contact-btn'></button>
+    <image src='http://img.yaotia.com/act/user-icon4.png?v=1'></image>联系书小页
+    <image src='http://img.yaotia.com/act/icon-8.png' class='u-arrow'></image>
+
+  </view>
+  <view class='m-order'>
+  <navigator hover-class="none"  url='/pages/user-order/user-order?status=-1'>我的订单
+    <text class='u-number'>{{pageData.totalorder>0?'('+pageData.totalorder+')':''}}</text>
+    <image src='http://img.yaotia.com/act/icon-8.png' class='u-arrow'></image>
+  </navigator>
+    <view class='m-block'>
+      <view>
+        <navigator hover-class="none"  url='/pages/user-order/user-order?status=0'>
+          <image src='http://img.yaotia.com/act/icon-2.png?v=1'></image>待付款
+          <text wx:if="{{pageData.topayorder}}">{{pageData.topayorder}}</text>
+        </navigator>
+      </view>
+      <view>
+        <navigator hover-class="none"  url='/pages/user-order/user-order?status=2'>
+          <image src='http://img.yaotia.com/act/icon-3.png?v=1'></image>待收货
+          <text wx:if="{{pageData.togetorder}}">{{pageData.togetorder}}</text>
+        </navigator>
+      </view>
+      <view>
+        <navigator hover-class="none"  url='/pages/user-order/user-order?status=8'>
+          <image src='http://img.yaotia.com/act/icon-5.png?v=1'></image>待评价
+          <text wx:if="{{pageData.togradeorder}}">{{pageData.togradeorder}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='m-edition'>
+  书小页打印社 {{version}}
+    <text>微信公众号：书小页</text>
+    <view class='m-home'>
+    <navigator url="/pages/guideMap/guideMap" open-type='redirect'>
+      <image src='http://img.yaotia.com/act/home.png?v=1'></image>
+      <text>首页</text>
+    </navigator>
+    </view>
+  </view>
+</view>

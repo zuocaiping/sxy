@@ -1,0 +1,55 @@
+<view class='page-body' wx:if="{{pageShow}}">
+  <view wx:if='{{showMask}}' class='mask'></view>
+  <view class='m-search'>
+    <view class="m-input {{showMask||showResult?'hascancel':''}}">
+      <image src='http://img.yaotia.com/act/search.png'></image>
+      <image wx:if="{{voteTitle}}" src='http://img.yaotia.com/act/s-del.png' class='u-del' bindtap='funDel'></image>
+      <input focus='{{inputFocus}}' placeholder="搜索资料名" bindinput='funSearch' value='{{voteTitle}}' bindconfirm='searchData' />
+    </view>
+    <text wx:if="{{showMask||showResult}}" bindtap='cancelSearch'>取消</text>
+      <!--提示信息-->
+  <view class='m-search-list' wx:if="{{dataPrompt.list.length>0}}">
+    <view wx:for="{{dataPrompt.list}}" wx:key="1" data-productid="{{item}}" bindtap='searchData'>
+      <image src='http://img.yaotia.com/act/search.png'></image>
+      <text data-productid="{{item}}" bindtap='searchData'>{{item}}</text>
+    </view> 
+  </view>
+  </view>
+  <!--热门、历史搜索-->
+  <view class='m-search-list m-history' wx:if="{{!showResult && historicalSearch.length>0}}">
+    <view class='u-title'>历史搜索</view>
+    <view wx:for="{{historicalSearch}}" wx:key="1">
+      <text bindtap='hisSearch' data-productid='{{item}}' bindtap='searchData'>{{item}}</text>
+      <image src='http://img.yaotia.com/act/del2.png' data-index="{{index}}" bindtap='eliminate'></image>
+    </view>    
+  </view>
+  <view class='m-search-list m-history' wx:if="{{!showResult && hotData.keywords.length>0}}">
+    <view class='u-title'>热门搜索</view>
+      <view wx:for="{{hotData.keywords}}" wx:key="1" data-productid="{{item}}" bindtap='searchData'>
+        {{item}}
+      </view>
+  </view>
+  <!--搜索数据-->
+  <view class='m-recommend' wx:if="{{showResult}}">
+    <view class='m-info'>共搜索到{{dataList.list.length}}个结果</view>
+    <view class='m-recommend-con' wx:for="{{dataList.list}}" wx:key="1">
+      <navigator hover-class='none' url='/pages/details/details?bookid={{item.bookid}}'>
+        <view class='m-book'>
+          <image src='{{item.image}}' mode="{{item.mode}}"></image>
+          <text wx:if="{{item.ishot==1}}">推荐</text>
+        </view>
+      </navigator>
+      <view class='m-con'>
+        <navigator hover-class='none' url='/pages/details/details?bookid={{item.bookid}}'>
+          <text class='u-name'>{{item.name}}</text>
+          <view class='u-author'>
+            <image src='http://img.yaotia.com/act/icon.png'></image>{{item.author.subjectname}}·{{item.author.name}}</view>
+          <text class='u-about'>共{{item.pages}}页     {{item.sellnum}}人已打印</text>
+        </navigator>
+        <navigator hover-class='none' url='/pages/details/details?bookid={{item.bookid}}'>
+          <text class="u-link" data-authorid="{{item.author.authorid}}" data-bookid="{{item.bookid}}">详情</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

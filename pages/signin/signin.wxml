@@ -1,0 +1,15 @@
+  <view class='m-signin'>
+    <image src='http://img.yaotia.com/act/logo.png'></image>
+    <!-- <image src='http://img.booktopaper.com/mini/icon-14.png'></image> -->
+  </view>
+  <!-- <view class='m-btn green'>微信快速登录</view>
+  <view class='m-btn'><image src='http://img.booktopaper.com/mini/icon-13.png'></image>使用手机登录</view> -->
+  <view class='m-conter'>
+    <view class='m-input'><image src='http://img.booktopaper.com/mini/icon-12.png'></image> <input placeholder="请输入手机号码"/></view>
+    <view class='m-input u-yzm'><image src='http://img.booktopaper.com/mini/icon-11.png'></image><input placeholder="请输入验证码"/><view class='m-yzm'>50S后可重试</view><view class='m-yzm-green'>50S后可重试</view></view>
+  </view>
+  <view class='m-btn green'><button type="primary" > 微信快速登录 </button></view>
+  <view class='m-wx'><button type="default" >  <view><image src='http://img.booktopaper.com/mini/icon-14.png'></image></view>微信快速授权登录</button></view>
+
+
+

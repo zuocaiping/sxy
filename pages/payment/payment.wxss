@@ -1,0 +1,37 @@
+/* pages/list/list.wxss */
+.g-header{background: #fff;}
+.m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+
+.m-payment{border-bottom:1px solid #f0f0f0; text-align: center;padding: 80rpx 0 30rpx;}
+.u-success{font-size: 48rpx; color: #41b96b; font-weight: bold;}
+.m-payment .u-text{font-size: 26rpx; color: #999999; display: block;margin-top:45rpx;}
+.u-btn{width: 182rpx;height: 68rpx; line-height: 68rpx; border-radius: 40rpx;margin: 63rpx 13rpx; border:1px solid #e5e5e5;font-size: 26rpx; display: inline-block;}
+.u-receive{border: none;background: #ff3d3d;width: 242rpx;color: #fff;font-weight: bold;font-size: 28rpx;}
+.u-receive text{color: #ffe57e;}
+.m-logistics{margin: 0 10rpx;display: flex;position: relative;padding-top: 143rpx;}
+.u-ems{font-size: 26rpx;color: #999999;position: absolute;top:60rpx;left: 0;width: 100%;text-align: center;}
+.m-logistics image{width: 190rpx;height: 110rpx;}
+.m-logistics view{flex: 1; text-align: center;}
+.m-logistics text.u-text{display: block;font-size: 24rpx; color: #999;}
+.m-img image{width: 100%;height: 310rpx; margin: 160rpx 0;}
+/*红包css*/
+.redpack{position: fixed;width: 100%;height: 100%;left: 0;top: 0; background-color: rgba(0, 0, 0, 0.5);z-index: 500;}
+.m-envelopes{text-align: center;font-size: 28rpx;padding-top:100rpx; color: #fd3331;background: url(http://img.yaotia.com/act/envelopes.png);width: 428rpx;height: 402rpx;position: fixed;  top: 20%;  left: 50%;margin-left: -214rpx;  z-index: 1001;background-size: 100%;}
+.m-envelopes .u-number{font-size: 100rpx; color: #fd3331;}
+.m-envelopes .u-text{display: block;}
+.m-btn{width: 260rpx;height: 67rpx;border-radius: 50rpx;background: #fac148;font-size: 30rpx;color: #202020;line-height: 67rpx;text-align: center;margin: 110rpx auto 0;}
+
+.m-envelopes1{background: url(http://img.yaotia.com/act/group-29.png);background-size: 100%;width: 410rpx;height: 460rpx; display: inline-block;text-align: center;color: #fff2c4; vertical-align: top; position: fixed;left: 50%;margin-left: -205rpx;top:25%;}
+.m-envelopes1 text{display: block; }
+.m-envelopes1 .u-title{font-size: 26rpx;margin-top:38rpx;}
+.m-envelopes1 .u-number{font-size: 30rpx;color: #353535;margin-top: 85rpx;font-weight: bold;}
+.m-envelopes1 .u-doubt{font-size: 50rpx;color: #353535;font-weight: bold;margin-top: 22rpx;}
+.m-btn-block{position: absolute;bottom:94rpx;display: flex;width: 100%;padding: 0 10rpx; box-sizing: border-box;}
+.m-btn-block text{width: 167rpx;height: 60rpx; line-height: 60rpx; flex: 1;font-size:30rpx;margin: 0 10rpx; }
+.m-btn-block .u-giveup{color: #fff;border:1px solid #fff;border-radius: 50rpx;}
+/*红包选择*/
+.red-choice{width: 410rpx;height: 280rpx;background: #fd3331;text-align: center; position: fixed;left: 50%;margin-left: -205rpx;top:30%;border-radius:15rpx; }
+.red-choice .u-title{font-size: 30rpx;color: #fff2c4;margin-top: 70rpx; }
+.red-choice .m-btn-block{bottom: 55rpx;}

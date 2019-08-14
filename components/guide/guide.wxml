@@ -1,0 +1,8 @@
+<view class='g-page'>
+  <view class="dialog-border">
+  <text wx:if="{{text}}">{{guides[curGuideIndex].content}}</text>      
+    <button bindtap='endGuide'>{{guides[curGuideIndex].btntext}}</button>
+  </view>
+  <image src='http://img.yaotia.com/act/dialogue2.png' style='opacity: 1;' wx:if="{{curGuideIndex==0}}"></image>
+  <image src='{{arry[curGuideIndex] ? guides[curGuideIndex].bgimg:"http://img.yaotia.com/act/dialogue2.png"}}' class="{{arry[curGuideIndex] ?'Action':''}}"></image> 
+</view> 

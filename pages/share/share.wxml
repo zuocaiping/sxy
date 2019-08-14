@@ -1,0 +1,75 @@
+<!--pages/share/share.wxml-->
+<view class='body-page' wx:if='{{pageShow}}'>
+  <view class='m-banner1'>
+  <navigator url='/pages/details/details?bookid={{bannerBookId}}' open-type='redirect'>
+    <image src="{{bannerurl}}" />
+  </navigator>
+  </view>
+  <view class='m-new'><image  src="{{avatar?avatar:'http://img.booktopaper.com/mini/u-new.png'}}" />
+    <view class='m-new-text'>
+    我是{{nick?nick:'书小页用户'}}.刚刚打印了一本资料。
+    <text wx:if="{{isSelf}}">恭喜你领到了翻倍资料打印红包，\n下次打印资料的时候可以用哦！</text>
+    <text wx:else>恭喜你抢到了我的资料打印红包，\n下次打印资料的时候可以用哦！</text>
+    </view>
+  </view>
+  <view class='m-data'>
+  
+  </view>
+  <view class='m-content'>
+    <!-- <view class='m-title'>获得一个红包，已存入您的账号</view> -->
+    <view class='m-envelopes'>
+      <view class='m-printing'>
+        <text class='u-number'>{{pages}}</text>页
+        <text>免费打印{{isSelf?'':'券'}}</text>
+      </view>
+      <view class='m-overdue'>学习资料打印专用
+        <text>{{exprietime}}</text>
+      </view>
+      <!-- <navigator url='/pages/guideMap/guideMap'>
+      </navigator> -->
+    </view>
+
+<view class='m-printing1'> 
+  <text>{{btntext}}</text>
+  <navigator open-type='redirect' url='/pages/guideMap/guideMap'>
+    <view class='u-btn'><text>立即去打印</text></view>
+  </navigator>
+</view>
+    <view class='m-friends'>
+      <text class='u-title'>看看朋友运气如何</text>
+      <view class='m-list' wx:for='{{friends}}' wx:key='unique'>
+        <view class='u-flex'>
+          <image src='{{item.avatar}}'></image>
+        </view>
+        <view class='u-flex'>
+          <text class='u-phone'>{{item.mobile}}</text>
+          <text class='u-time'>{{item.time}}</text>
+        </view>
+        <view class='u-flex'>
+          <text class='u-pags'>{{item.pages}}页</text>
+        </view>
+      </view>
+
+    </view>
+    <view class='m-ewm'></view>
+  </view>
+  <!-- <view class='m-bottom'></view> -->
+</view>
+
+<view class="modal-box" hidden='{{redStep!=1}}'>
+  <view class="modal-envelopes">
+  ?
+  <text>你抢到了一个书小页红包</text>
+  <view class='u-btn' bindtap='openRed'>试试手气</view>
+  </view>
+</view>
+
+<view class="modal-box" hidden='{{redStep!=2}}' bindtap='colseRed'>
+  <view class="modal-envelopes" catchtap='stopMp'>
+  {{pages}}<text class='u-ye'>页</text>
+  <text>书小页资料打印红包</text>
+  <text class='u-text'>3s后自动关闭</text>
+  </view>
+</view>
+
+<signup show="{{showSignUp}}" successcb="{{signupcb}}" force="{{forceSignUp}}"></signup>

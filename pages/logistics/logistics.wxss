@@ -1,0 +1,34 @@
+/* pages/list/list.wxss */
+.g-header{background: #fff;}
+.m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+
+.m-book{border-radius: 20rpx; float: left;margin:0 30rpx 0 0rpx; position: relative; }
+.m-book image{width:130rpx;height: 122rpx; margin: 0rpx auto 0; display: block;}
+.right-item{display: none;}
+.right-item.active{display: block;}
+.m-recommend-con{ position: relative; display: flex;margin:0 40rpx 30rpx;padding: 20rpx;border-bottom: 1px solid #f0f0f0;}
+.m-con{flex: 1;}
+.m-con text{display: block;}
+.u-name{font-size: 36rpx; color: #333;margin-bottom: 12rpx; line-height: 46rpx;}
+.u-about{font-size: 30rpx; line-height: 32rpx;color: #b0afaf;margin-bottom: 20rpx;}
+.m-con .u-copy{border-radius: 30rpx;border:1px solid #e6e6e6;width: 68rpx;height: 36rpx; display: inline-block;line-height: 36rpx; text-align: center;font-size: 24rpx;margin-left: 10rpx;}
+.m-logistics{margin: 0 40rpx;position: relative;padding-top: 84rpx;}
+.u-ems{font-size: 26rpx;color: #333333;position: absolute;top:10rpx;left: 0;}
+.m-logistics image{width: 190rpx;height: 110rpx;}
+.m-logistics view{flex: 1; text-align: center;}
+.m-logistics text.u-text{display: block;font-size: 24rpx; color: #999;}
+.m-address{border-bottom:1px solid #f0f0f0;margin: 50rpx 40rpx 0;font-size: 28rpx; color: #333333;position: relative;padding-left: 75rpx;padding-bottom:40rpx;line-height:40rpx;}
+.m-address image{width: 54rpx;height: 64rpx; position: absolute;left:0;top:0;}
+.m-address text{display: inline-block;}
+.m-trip{margin-top: 57rpx;}
+.m-trip-list{border-left: 1px solid #e6e6e6;margin: 0 40rpx 0 198rpx; position: relative;padding-left:30rpx;font-size:28rpx;color: #999999;line-height: 34rpx;padding-bottom:42rpx; }
+.m-trip-list .u-spot{width: 14rpx;height: 14rpx; display: inline-block;border-radius: 30rpx; background: #e6e6e6; position: absolute;left: -7rpx;top:0;}
+.m-time{position: absolute;left:-170rpx;color: #999999;font-size: 26rpx; text-align: right;}
+.m-time text{display: block;font-size: 24rpx;}
+.r-text{margin-top:-10rpx;}
+.m-trip-list.completed,.m-trip-list.completed .m-time{color: #f86a3e;}
+.m-trip-list.completed image{width: 40rpx;height: 40rpx;position: absolute;left: -20rpx;top:0;}
+.u-detailed{color: #2f7dc4;font-size: 28rpx;margin:50rpx 60rpx 40rpx; text-align: right;}
+.m-logistics-block{width: 100%;display: flex;margin: 0 -40rpx;}

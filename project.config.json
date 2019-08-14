@@ -1,0 +1,358 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx6523d84cf62685bc",
+	"projectname": "%E4%B9%A6%E5%B0%8F%E9%A1%B5",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "details",
+					"pathName": "pages/details/details",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "list",
+					"pathName": "pages/list/list",
+					"query": "categoryid=1"
+				},
+				{
+					"id": -1,
+					"name": "printing",
+					"pathName": "pages/printing/printing",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "guideMap",
+					"pathName": "pages/guideMap/guideMap",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "collection",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dataClassification",
+					"pathName": "pages/dataClassification/dataClassification",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "details",
+					"pathName": "pages/details/details",
+					"query": "bookid=23"
+				},
+				{
+					"id": -1,
+					"name": "collection",
+					"pathName": "pages/collection/collection",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "author",
+					"pathName": "pages/author/author",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "dataClassification",
+					"pathName": "pages/dataClassification/dataClassification",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "confirmOrder",
+					"pathName": "pages/confirmOrder/confirmOrder",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "confirmAddress",
+					"pathName": "pages/confirmAddress/confirmAddress",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "collection",
+					"pathName": "pages/collection/collection",
+					"query": "bookid=5"
+				},
+				{
+					"id": 17,
+					"name": "购物车 printer",
+					"pathName": "pages/printer/printer",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "confirmAddress",
+					"pathName": "pages/confirmAddress/confirmAddress",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": "bookid=5"
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": 21,
+					"name": "收藏 collection",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": 23,
+					"name": "confirmAddress  填写收货地址",
+					"pathName": "pages/confirmAddress/confirmAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myAddress",
+					"pathName": "pages/myAddress/myAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dataClassification",
+					"pathName": "pages/dataClassification/dataClassification",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "coupon  我的优惠券、红包",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": 29,
+					"name": "user 我的",
+					"pathName": "pages/user/user",
+					"query": "orderid=30"
+				},
+				{
+					"id": -1,
+					"name": "user-order 我的订单",
+					"pathName": "pages/user-order/user-order",
+					"query": ""
+				},
+				{
+					"id": 31,
+					"name": "logistics 查看物流",
+					"pathName": "pages/logistics/logistics",
+					"query": "orderid=23998"
+				},
+				{
+					"id": -1,
+					"name": "collection 我的收藏",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search 搜索",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": 34,
+					"name": "details 详情页",
+					"pathName": "pages/details/details",
+					"query": "bookid=33"
+				},
+				{
+					"id": 35,
+					"name": "user 评价",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": 36,
+					"name": "user-order  我的订单",
+					"pathName": "pages/user-order/user-order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "coupon",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": 39,
+					"name": "confirmOrder 订单确认",
+					"pathName": "pages/confirmOrder/confirmOrder",
+					"query": "cartids=22874,22875"
+				},
+				{
+					"id": -1,
+					"name": "logistics",
+					"pathName": "pages/logistics/logistics",
+					"query": ""
+				},
+				{
+					"id": 41,
+					"name": "payment 订单完成领取红包",
+					"pathName": "pages/payment/payment",
+					"query": "orderid=23998"
+				},
+				{
+					"id": -1,
+					"name": "logistics 物流",
+					"pathName": "pages/logistics/logistics",
+					"query": "orderid=30"
+				},
+				{
+					"id": -1,
+					"name": "comment 资料评价",
+					"pathName": "pages/comment/comment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myAddress我的地址",
+					"pathName": "pages/myAddress/myAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "share",
+					"pathName": "pages/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单已完成",
+					"pathName": "pages/payment/payment",
+					"query": "orderid=30260"
+				},
+				{
+					"id": -1,
+					"name": "confirmOrder",
+					"pathName": "pages/confirmOrder/confirmOrder",
+					"query": "bookid=40"
+				},
+				{
+					"id": -1,
+					"name": "user-order",
+					"pathName": "pages/user-order/user-order",
+					"query": "status=-1"
+				},
+				{
+					"id": 49,
+					"name": "share  分享",
+					"pathName": "pages/share/share",
+					"query": "uid=1&page=20&time=1533196797"
+				},
+				{
+					"id": -1,
+					"name": "address-confirmation 地址确认",
+					"pathName": "pages/address-confirmation/address-confirmation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "details",
+					"pathName": "pages/printer/printer",
+					"query": "bookid=23"
+				},
+				{
+					"id": -1,
+					"name": "printer",
+					"pathName": "pages/printer/printer",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/signin/signin",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,37 @@
+<!--自定义弹框-->
+<view class='redpack' hidden='{{ishide}}' bindtap='hidePack'>
+  <view class='m-envelopes' catchtap='stopPropagation' wx:if='{{redstyle==1}}'>
+    <text class='u-number'>{{pages}}</text>页
+    <text class='u-text'>获得免费打印{{pages}}页</text>
+    <view class='m-btn' catchtap='getPack'>悄悄收入囊中</view>
+  </view>
+  <view wx:if='{{redstyle==2}}'>
+    <!--红包弹框-->
+    <view class='m-envelopes' hidden='{{step!=3}}' catchtap='stopPropagation' >
+      <text class='u-number'>{{isDouble?pages*2:pages}}</text>页
+      <text class='u-text'>获得免费打印{{isDouble?pages*2:page}}页</text>
+      <view class='m-btn-block' style='bottom:54rpx;padding:0 50rpx'>
+        <text class='u-giveup' bindtap='hideModal'>确定</text>
+      </view>
+    </view>
+    <!--订单完成领红包-->
+    <view class='m-envelopes1' catchtap='stopPropagation' hidden='{{step!=1}}'>
+      <text class='u-title'>你获得了免费打印页数</text>
+      <view class='u-number'><text>{{pages}}</text>页</view>
+      <view class='m-btn-block'>
+        <text wx:if="{{canDouble}}" class='u-giveup' bindtap='justTake'>领取</text>
+        <text wx:else class='u-giveup' bindtap='forgiveTake'>放弃领取</text>
+        <button wx:if="{{canDouble}}" open-type='share' class='m-btn' bindtap='shareTake'>分享翻2倍</button>
+        <button wx:else  class='m-btn' bindtap='justTake'>领取</button>
+      </view>
+    </view>
+    <!--红包选择-->
+    <view class='red-choice' catchtap='stopPropagation' hidden='{{step!=2}}'>
+      <view class='u-title'>真的要放弃福利吗？</view>
+      <view class='m-btn-block'>
+        <text class='u-giveup' bindtap='realForgiveTake'>放弃</text>
+        <text class='m-btn' bindtap='backTake'>返回领取</text>
+      </view>
+    </view>
+  </view>
+</view>

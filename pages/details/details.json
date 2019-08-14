@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资料详情",
+  "usingComponents": {
+    "signup": "../../../components/signup/signup"
+  }
+}

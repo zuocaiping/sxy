@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "书小页打印社",
+  "usingComponents": {
+    "signup": "../../../components/signup/signup",
+    "guide": "../../../components/guide/guide",
+    "redpack": "../../../components/redpack/redpack"
+  }
+}

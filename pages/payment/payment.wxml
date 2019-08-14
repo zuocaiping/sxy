@@ -1,0 +1,83 @@
+<view class='page-body' wx:if='{{pageShow}}'>
+  <view class='g-header'>
+    <view class="m-top" hidden='true'>
+      <view class='m-left'>
+        <image src='http://img.yaotia.com/act/arrow.png'></image>支付成功
+      </view>
+    </view>
+  </view>
+  <view class='m-payment'>
+    <view class='u-success'>订单已完成</view>
+    <text class='u-text'>感谢您对书小页的信任，期待继续为您服务！</text>
+    <view class='u-btn'>
+       <navigator hover-class='none' url='/pages/user-order/user-order'>
+        查看订单
+      </navigator> 
+      <!-- <navigator hover-class='none' url='/pages/list/list'>
+        再加一本
+      </navigator> -->
+    </view>
+    <!-- <view class='u-btn u-receive' wx:if="{{_receive==0}}" bindtap='showRed'>领
+      <text>{{redPages}}</text>页免费打印
+    </view> -->
+    <view class='u-btn u-receive' wx:if="{{_receive==0}}" bindtap='showRed'>领打印红包奖励
+    </view>
+    <view class='u-btn u-receive' wx:if="{{_receive!=0}}" bindtap='showRed'>已领取红包
+    </view>
+  </view>
+  <view class='m-logistics'>
+    <text class='u-ems'>资料正在打印中...</text>
+    <view wx:if="{{_printing == 0}}">
+      <image src='http://img.yaotia.com/act/step1-state1.png'></image>
+      <text class='u-text'>打印资料</text>
+    </view>
+    <view wx:if="{{_printing == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step1-state2.gif'></image>
+      <text class='u-text'>打印中</text>
+    </view>
+    <view wx:if="{{_printing == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step1-state3.png'></image>
+      <text class='u-text'>打印完成</text>
+    </view>
+    <view wx:if="{{_transported == 0}}">
+      <image src='http://img.yaotia.com/act/step2-state1.png'></image>
+      <text class='u-text'>等待运输</text>
+    </view>
+    <view wx:if="{{_transported == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step2-state2.gif'></image>
+      <text class='u-text'>运输中</text>
+    </view>
+    <view wx:if="{{_transported == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step2-state3.png'></image>
+      <text class='u-text'>运输完成</text>
+    </view>
+    <view wx:if="{{_distribution == 0}}">
+      <image src='http://img.yaotia.com/act/step3-state1.png'></image>
+      <text class='u-text'>等待派送</text>
+    </view>
+    <view wx:if="{{_distribution == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step3-state2.gif'></image>
+      <text class='u-text'>正在派送</text>
+    </view>
+    <view wx:if="{{_distribution == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step3-state3.png'></image>
+      <text class='u-text'>派送完成</text>
+    </view>
+    <view wx:if="{{_collect == 0}}">
+      <image src='http://img.yaotia.com/act/step4-state1.png'></image>
+      <text class='u-text'>待收包裹</text>
+    </view>
+    <view wx:if="{{_collect == 1 || _Boolean == false}}">
+      <image src='http://img.yaotia.com/act/step4-state2.gif'></image>
+      <text class='u-text'>待收包裹</text>
+    </view>
+    <view wx:if="{{_collect == 2 || _Boolean == true}}">
+      <image src='http://img.yaotia.com/act/step4-state3.png'></image>
+      <text class='u-text'>订单已完成</text>
+    </view>
+  </view>
+  <view class='m-img' wx:if='{{showBanner==1}}'>
+    <image src='http://img.yaotia.com/act/img.png'></image>
+  </view>
+  <redpack ishide="{{!showRed}}" pages='{{redPages}}' redId='{{redId}}' bind:getRedSuccess='getRed' itemId='{{orderId}}' redstyle='2' canDouble='true'></redpack>
+</view>

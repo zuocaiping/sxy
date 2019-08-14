@@ -1,0 +1,49 @@
+
+<view class='page-body' wx:if="{{pageShow}}">
+  <view class='g-header'>
+    <view class="m-top" hidden='true'>
+      <view class='m-left'>
+        <image src='http://img.yaotia.com/act/arrow.png'></image>我的优惠券
+      </view>
+    </view>
+    <view class='m-menu-list'>
+      <text class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id="0" data-id="0" bindtap="tab">红包</text>
+      <text class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="1" data-id="1" bindtap="tab">代金券</text>
+    </view>
+    <view class='m-change'></view>
+  </view>
+
+  <view class="right-item {{tabArr.curHdIndex=='0'? 'active' : ''}}">
+    <view wx:for="{{redList}}" class="m-envelopes {{item.isfinish=='1' ? '' : 'm-Nopoint'}}" data-index="{{index}}"  wx:key="uniqe"  bindtap='getRed'>
+      <text class='u-title'>{{item.taskname}}</text>
+      <text class='u-number'>{{item.freepages}}页</text>
+      <text class='u-text'>{{item.desc}}</text>
+      <text class='u-btn' >{{item.isfinish?'领取':''}}</text>
+    </view>
+    <!-- <view class='m-envelopes m-Nopoint'>
+      <text class='u-title'>限时红包</text>
+      <text class='u-number' style='font-size:48rpx;font-weight:bold;margin-top:20rpx;'>?</text>
+      <text class='u-text'>首次下单购买后可打开</text>
+    </view> -->
+    <view wx:if='{{redList==""}}' class='m-empty'><image src='http://img.yaotia.com/act/default_image_noshopping.png'></image></view>
+  </view>
+  <view class="right-item {{tabArr.curHdIndex=='1'? 'active' : ''}}">
+    <view class='m-coupon {{cardColor[index%3]}}' wx:for="{{cardList}}" wx:key="uniqe">
+      <view class='m-left'>
+        <text class='u-number'>{{item.pages}}</text>页
+        <text class='u-text'>免费打印券</text>
+      </view>
+      <view class='m-right'>
+        <text class='u-text'>可抵扣{{item.pages}}页打印现金</text>
+        <text>{{item.expiretime}}</text>
+      </view>
+    </view>    
+    <!-- <view wx:if='{{cardList==""}}' class='m-empty'><image src='http://img.yaotia.com/act/default_image_noshopping.png'></image></view> -->
+
+    <view class='m-prompt' wx:if="{{cardList==''}}">
+        <image src='http://img.yaotia.com/act/noContent2.png'></image>
+        <text>暂无优惠券</text>
+      </view>
+  </view>
+  <redpack wx:if='{{showRed}}' ishide="{{!showRed}}" pages='{{curTask.freepages}}' redId='{{curTask.taskid}}' bind:getRedSuccess='getRedSuccess' itemId='{{curTask.itemid}}' redstyle='2'></redpack>
+</view>

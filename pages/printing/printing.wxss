@@ -1,0 +1,23 @@
+/* page{background: #ebeeef;} */
+page{background: #fff;}
+.m-top{position: relative;padding-left:39rpx;padding-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.m-printing{text-align: center;background: #fff;padding:78rpx 0 64rpx;}
+.m-printing image{width: 392rpx;height: 204rpx;}
+.m-printing text{font-size: 28rpx;color: #d7e0e2;display: block;margin: 30rpx 0 50rpx;}
+.m-printing .m-btn{width: 213rpx;height: 66rpx;border: 1px solid #5acc82;border-radius: 40rpx; text-align: center; line-height: 66rpx;color: #5acc82;font-size: 30rpx;margin: 0 auto;}
+.m-title{border-top: 1px solid #e6e6e6;  width: 255rpx; padding:0 45rpx; margin:65rpx auto 48rpx; text-align: center;display: block;}
+.m-title text{font-size: 32rpx;color: #bcbbbb;background:#ebeeef;margin-top:-23rpx; position: relative;z-index: 2; display: block;}
+.m-book{border-radius: 20rpx; width:300rpx;height: 280rpx; float: left;margin:0 30rpx 0 20rpx; position: relative; }
+.m-book image{width:300rpx;height: 280rpx; margin: 20rpx auto 0; display: block;}
+.m-book text{width:50rpx;height: 50rpx;border-radius: 50%;text-align: center;line-height: 50rpx;font-size: 16rpx;color: #fff; position: absolute;right:24rpx;top:-25rpx; display: block;background: #fdb73c;}
+.m-recommend{background: #fff;padding-top:60rpx;padding-bottom:20rpx;}
+.m-recommend-con{display: flex;margin-bottom: 60rpx;}
+.m-con{flex: 1;margin-right: 30rpx;}
+.m-con text{display: block;}
+.u-name{font-size: 40rpx; color: #333;margin-bottom: 12rpx;}
+.u-about{font-size: 30rpx; line-height: 32rpx;color: #b0afaf;margin-bottom: 20rpx;}
+.u-author{font-size: 30rpx; color: #262626;margin-bottom: 18rpx;}
+.u-author image{width: 53rpx;height: 49rpx; vertical-align: top;margin: -2rpx 0 0 -15rpx;}
+.u-link{width:130rpx;height: 53rpx;border-radius: 50rpx;background: #5acc82; text-align: center; line-height: 53rpx;color: #fff;font-size: 26rpx;font-weight: bold;}

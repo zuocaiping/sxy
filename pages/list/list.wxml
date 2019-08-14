@@ -1,0 +1,88 @@
+<!--pages/list/list.wxml-->
+<view wx:if="{{_boolean}}">
+  <view class="m-top">
+    <view class='m-left'>
+      <view bindtap="menuTab">
+        <navigator hover-class="none" url='/pages/dataClassification/dataClassification'>
+          <image src='http://img.yaotia.com/act/i-menu.png'></image>{{categoryname}}
+          <text class='u-receive'>切换</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="m-search">
+      <image src='http://img.yaotia.com/act/i-search.png'></image>
+      <input placeholder="搜资料" bindfocus="funInput" />
+    </view>
+  </view>
+
+  <view class='m-menu-list'>
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%" bindtap="tapMove">
+      <text class="{{currentTab==index || index == '' ? 'active' : ''}}" data-idx="{{index}}" data-categoryid="0" bindtap="tab">全部</text>
+      <text class="{{currentTab==index ? 'active' : ''}}" data-idx="{{index}}" wx:for="{{categories}}" wx:key='1' data-categoryid="{{item.categoryid}}" bindtap="tab">{{item.name}}</text>
+    </scroll-view>
+  </view>
+
+  <view class='m-change'></view>
+  <view class='m-recommend' wx:for="{{booklist}}" wx:key='1'>
+    <view class='m-recommend-con'>
+      <navigator hover-class="none" url='/pages/details/details?bookid={{item.bookid}}'>
+        <view class='m-book'>
+          <image src='{{item.image}}' mode="{{item.mode}}"></image>
+          <text wx:if="{{item.ishot==1}}">推荐</text>
+        </view>
+      </navigator>
+      <view class='m-con'>
+        <navigator hover-class="none" url='/pages/details/details?bookid={{item.bookid}}'>
+          <text class='u-name'>{{item.name}}</text>
+          <view class='u-about'>{{item.profile}}</view>
+        </navigator>
+        <view class='u-author'>
+          <image src='http://img.yaotia.com/act/i-icon0.png'></image>编：{{item.author.subjectname}}·{{item.author.name}}</view>
+        <!-- <navigator hover-class="none" url='/pages/details/details?bookid={{item.bookid}}'>
+          <text class="u-link" data-bookid="{{item.bookid}}" bindtap="linkDetails">详情</text>
+        </navigator> -->
+        <view class='m-specifications'>规格：{{item.pages}}页     <image src="http://img.booktopaper.com/mini/i-printer2.png"></image>{{item.sellnum}}</view>
+      </view>
+      
+    </view>
+  </view>
+  <!-- <view wx:if='{{booklist==""}}' class='m-empty'>
+    <image src='http://img.yaotia.com/act/default_image_noshopping.png'></image>
+  </view> -->
+
+  <view class='m-prompt' wx:if="{{booklist==''}}">
+    <image src='http://img.yaotia.com/act/noContent1.png?v=1'></image>
+    <text>即将上线</text>
+  </view>
+
+  <view class='m-tab-title' style='margin-top:20rpx;'>
+    <view>
+      <navigator hover-class="none" url='/pages/guideMap/guideMap' open-type='redirect'>
+        <image src='http://img.yaotia.com/act/home.png?v=1'></image>
+        <text>首页</text>
+      </navigator>
+    </view>
+    <view bindtap="error" style='margin-left:185rpx;'>
+      <navigator hover-class="none" wx:if="{{cartnum!=0}}" url='/pages/printer/printer'>
+        <image src='http://img.yaotia.com/act/i-printer1.png?v=1'></image>
+        <text class='u-new' wx:if="{{cartnum!=0}}">{{cartnum}}</text>
+        <text>打印机</text>
+      </navigator>
+
+      <navigator hover-class="none" wx:if="{{cartnum==0}}" url='/pages/printing/printing'>
+        <image src='http://img.yaotia.com/act/i-printer1.png?v=1'></image>
+        <text class='u-new' wx:if="{{cartnum!=0}}">{{cartnum}}</text>
+        <text>打印机</text>
+      </navigator>
+    </view>
+
+    <view>
+      <button wx:if="{{isSetUserInfo==0}}" class='btn-gui' open-type='getUserInfo' bindgetuserinfo='getUserInfo' catchtap='stopMp'></button>
+      <navigator hover-class="none" url='/pages/me/me' open-type='redirect'>
+        <image src='http://img.yaotia.com/act/i-business.png?v=1'></image>
+        <text>我的 </text>
+      </navigator>
+    </view>
+  </view>
+</view>
+<signup show="{{showSignUp}}" successcb="{{signupcb}}" force="{{forceSignUp}}"></signup>

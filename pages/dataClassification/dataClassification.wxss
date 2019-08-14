@@ -1,0 +1,8 @@
+/* pages/list/list.wxss */
+.g-header{background: #fff;}
+.m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.m-book{width: 175rpx;display: inline-block;margin: 34rpx 0 0 61rpx;text-align: center;}
+.m-book image{width: 145rpx;height: 183rpx;margin: 0 auto;display: block;}
+.m-book text{font-size: 28rpx; display: block;color: #000000;text-align: center;margin-top: 5rpx;}

@@ -1,0 +1,158 @@
+<scroll-view wx:if="{{pageShow}}" scroll-y="{{true}}" scroll-top="{{scrollTop}}">
+  <view class='m-banner' wx:if='{{data.bannerimage}}'>
+    <image src='{{data.bannerimage}}' mode="{{item.mode}}"></image>
+  </view>
+  <view class='m-printing-img' bindtap='authJumpUrl' data-url='/pages/printing/printing'>
+    <image src='http://img.yaotia.com/act/i-printer1.png'></image>
+    <text wx:if="{{cartnum!=0}}">{{cartnum}}</text>
+  </view>
+
+  <navigator wx:if="{{shopping!=0}}" url='/pages/printer/printer'>
+    <view class='m-printing-img'>
+      <image src='http://img.yaotia.com/act/i-printer1.png'></image>
+      <text wx:if="{{cartnum!=0}}">{{cartnum}}</text>
+    </view>
+  </navigator>
+  <view class='m-recommend'>
+    <view class='m-title'>{{data.name}}</view>
+    <view class='m-title1'>
+      <view class='u-left'>
+        <image src='http://img.yaotia.com/act/i-location.png'></image>适用人群：{{data.usefor}}
+      </view>
+      <view class='u-more'>
+        <image src='http://img.yaotia.com/act/i-complete.png'></image>{{data.sellnum}}人次打印</view>
+      <view class='m-share'>
+        <button open-type='share' bindtap='scroll'>分享</button>
+      </view>
+      <view class='u-author'>
+        <image src='http://img.yaotia.com/act/i-icon0.png'></image>本资料共 {{data.pages}}页，相当于市面上
+        <text>{{data.meanpages}}页</text> 同类资料内容 </view>
+    </view>
+    <view class='m-broadcast' wx:if='{{data.imageurls.length>0}}'>
+      <view class='m-broadcast-con'>
+        <scroll-view class="scroll-view_H" scroll-x style="width: 100%" bindtap="tapMove">
+          <image wx:for='{{data.imageurls}}' src='{{item}}' wx:key="uniqe" bindtap='previewImg' data-url="{{item}}"></image>
+        </scroll-view>
+      </view>
+      <!-- <view class='m-spot'>
+      <text class='u-current'></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+    </view> -->
+    </view>
+  </view>
+  <view class='m-data-about'>
+    <view class='u-title'>资料介绍</view>
+    <view>
+      <text class="b-desc{{!showFullDesc?' half':''}}">{{data.profile}}</text>
+      <text class='more' wx:if='{{!showFullDesc}}' bindtap='showFullDesc'>更多</text>
+      <text class='more' wx:if='{{showFullDesc}}' bindtap='hideFullDesc'>收起</text>
+    </view>
+  </view>
+  <view class='m-recommend-con' bindtap='jumpUrl' data-url='/pages/author/author?authorid={{data.authorinfo.authorid}}'>
+    <view class="u-title">编.者介绍</view>
+    <view class='m-book'>
+      <image src='{{data.authorinfo.bodypic}}'></image>
+    </view>
+    <view class='m-con'>
+      <text class='u-name'>{{data.authorinfo.name}}</text>
+      <view class='u-about'>{{data.authorinfo.profile}}
+        <text class='more'>更多</text>
+      </view>
+    </view>
+  </view>
+  <view class='m-recommend-con m-record'>
+    <view class="u-title">更新记录
+      <!-- <text>历史记录</text> -->
+    </view>
+    <view class='m-record-list' wx:for="{{data.updatelogs}}" wx:key="uniqe">
+      <text class='u-spot'></text>
+      <text class='u-time'>{{item.date}}</text>
+      <view class='u-text'>{{item.content}}
+        <!--text class='more'>更多</text-->
+      </view>
+    </view>
+  </view>
+  <view class='m-recommend-con m-comment' wx:if='{{data.commentnum>0}}'>
+    <view class="u-title">评论
+      <text class='u-number'>({{data.commentnum}})</text>
+      <text wx:if='{{data.commentnum>3}}'>查看全部</text>
+    </view>
+    <view class='m-record-list' wx:for="{{data.comments}}" wx:key="uniqe">
+      <text class='u-time'>{{item.date}}</text>
+      <view class='u-text'>{{item.content}}
+        <!--text class='more'>更多</text-->
+      </view>
+    </view>
+  </view>
+  <view class='m-recommend-con m-comment'>
+    <view class="u-title">资料基本信息
+      <!-- <text>查看全部</text> -->
+    </view>
+    <view class='m-record-list m-information'>
+      <view class='u-text1'>
+        <text wx:for="{{data.baseinfo}}" wx:key="uniqe">{{item.name}}：{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='m-share1'>
+    <view class='m-share1-list'>
+      <view style='text-align: left;'>
+        <image src='http://img.booktopaper.com/mini/c-icon2.png?v=1' style='margin-left:25rpx;'></image>
+        <text>原创内容</text>
+      </view>
+      <view>
+        <image src='http://img.booktopaper.com/mini/c-icon1.png?v=1'></image>
+        <text>满100页包邮</text>
+      </view>
+      <view style='text-align: right;'>
+        <image src='http://img.booktopaper.com/mini/c-icon3.png?v=1' style='margin-right:35rpx;'></image>
+        <text>48小时发货</text>
+      </view>
+    </view>
+    <text class='u-text'>如果这本资料能够帮到你身边的朋友，请推荐给他（她）！</text>
+    <view class='u-btn'>
+      <button open-type='share' bindtap='scrollToTop'>推荐资料给好友</button>
+    </view>
+  </view>
+  <view class='m-copyright'>
+    <view class='u-title'>
+      <text></text>
+    </view>
+    <text>本资料著作权归梧叶网络所有，授权“书小页”提供打印或免费下载，仅供个人学习使用，你可自由拷贝影印，但未获授权不得对内容或包装进行改编、删节或用于商业用途。
+如您发现资料内容存在错误或有争议，欢迎联系</text>
+    <button open-type='contact'>小页客服</button>
+    <text>进行处理。</text>
+  </view>
+  <view class='m-fun'>
+    <view class='m-home'>
+      <navigator url='/pages/guideMap/guideMap' open-type='redirect'>
+        <image src='http://img.yaotia.com/act/home.png?v=1'></image>首页
+      </navigator>
+    </view>
+    <view class='m-collection m-home' bindtap='addCollection' wx:if="{{data.iscollect != 1}}" data-state="{{data.iscollect}}">
+      <image src='http://img.booktopaper.com/mini/i-follow.png'></image>
+      <text>收藏</text>
+    </view>
+    <view class='m-collection m-home' bindtap='addCollection' wx:else data-state="{{data.iscollect}}">
+      <image src='http://img.booktopaper.com/mini/i-follow1.png'></image>
+      <text>已收藏</text>
+    </view>
+    <view class='m-join' bindtap='addToCart' data-id="5" wx:if="{{data.isincart!=1}}">
+      加入打印机
+      <text wx:if="{{cartnum!=0}}">{{cartnum}}</text>
+    </view>
+    <view class='m-join m-already' bindtap='addToCart' data-id="5" wx:if="{{data.isincart==1}}">
+      <navigator url='/pages/printer/printer'>
+        已加入打印机
+      </navigator>
+      <text wx:if="{{cartnum!=0}}">{{cartnum}}</text>
+    </view>
+    <view class='m-printing' bindtap="authJumpUrl" data-url='/pages/confirmOrder/confirmOrder?bookid={{data.bookid}}'>
+      立即打印
+    </view>
+  </view>
+</scroll-view>
+<signup show="{{showSignUp}}" successcb="{{signupcb}}" force="{{forceSignUp}}"></signup>

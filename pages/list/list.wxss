@@ -1,0 +1,52 @@
+/* pages/list/list.wxss */
+page{padding-bottom:160rpx;}
+.m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx; }
+.m-top .m-left{font-size: 36rpx;color: #242424; font-weight: bold;}
+.m-top .m-left image{width:32rpx;height:28rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.u-bold{font-weight: bold;color: #ec2c2c;}
+.u-receive{ font-weight: normal; color: #cecece;font-size: 25rpx;text-decoration: underline;}
+.m-search{position: absolute;right:12rpx;font-size:24rpx; line-height: 58rpx; color:#999;width: 254rpx;border-radius:40rpx;height: 58rpx;background: #f7f7f7;top:0;padding:0 15rpx 0 60rpx;}
+.m-search input{ line-height: 58rpx;height: 58rpx;}
+.m-search image{width: 24rpx;height: 24rpx;position: absolute;top:50%;margin-top:-12rpx;left:17rpx;}
+
+.m-book{border-radius: 20rpx; width:300rpx;height: 280rpx;float: left;margin:0 30rpx 0 20rpx; position: relative; }
+.m-book image{width:300rpx;height: 280rpx; display: block;}
+.m-book text{width:50rpx;height: 50rpx;border-radius: 50%;text-align: center;line-height: 50rpx;font-size: 16rpx;color: #fff; position: absolute;right:24rpx;top:-25rpx; display: block;background: #fdb73c;}
+.right-item{display: none;}
+.right-item.active{display: block;}
+.m-recommend-con{display: flex;margin-bottom: 68rpx;}
+.m-con{flex: 1;margin-right: 30rpx;}
+.m-con text{display: block;}
+.u-name{font-size: 32rpx; line-height: 36rpx; color: #333;margin-bottom: 18rpx;}
+ .u-about{font-size: 26rpx; line-height: 32rpx;color: #b0afaf;margin-bottom: 20rpx;height: 63rpx;max-width: 339rpx;
+display:-webkit-box;
+word-break:break-all;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.u-author{font-size: 26rpx; color: #262626;}
+.u-author image{width: 53rpx;height: 49rpx; vertical-align: top;margin: -2rpx 0 0 -15rpx;}
+.u-link{width:130rpx;height: 53rpx;border-radius: 50rpx;background: #5acc82; text-align: center; line-height: 53rpx;color: #fff;font-size: 26rpx;font-weight: bold;}
+.m-tab-title{display: flex;padding: 20rpx 0 10rpx; position: fixed;width: 100%;background: #fff;bottom: 0;left: 0;z-index: 1000;}
+.m-tab-title view{flex: 1;text-align: center;font-size: 30rpx;color: #767676; line-height: 50rpx;position: relative;}
+.m-tab-title .u-new{width: 30rpx;height: 30rpx; font-size: 20rpx; color: #fff;border:2rpx solid #fff;border-radius: 50%;display: inline-block;position: absolute;background: #ef1d1d;font-weight: bold;line-height: 30rpx;top:-10rpx;left:50%;margin-left: 5rpx;}
+.m-tab-title image{width: 64rpx;height: 64rpx; display: block;margin: 0 auto;}
+.m-specifications{color: #b0afaf;font-size: 24rpx;}
+.m-specifications image{width:42rpx;height:42rpx;margin: -4rpx 0 0 20rpx; vertical-align: top;}
+.m-menu-list{ text-align: left;padding-left: 20rpx;}
+.m-menu-list text{font-size: 28rpx; color: #989898;margin: 0 15rpx;padding: 0 10rpx; display: inline-block;  line-height: 76rpx; text-align: center;}
+.m-menu-list .active{border-bottom: 4rpx solid #242424;color: #333333;}
+.m-change{background-image: -webkit-linear-gradient(top, #f6f6f6, #fff);height: 15rpx;margin-bottom:41rpx; }
+.scroll-view_H{
+  width: 100%; 
+  white-space: nowrap;
+}
+.m-empty image{width: 265rpx;height: 190rpx;margin: 150rpx auto; display: block;}
+.m-loading{text-align: center;margin-top:20%;}
+/**暂无订单**/
+.m-prompt{background: #fff;padding:200rpx 0 300rpx;}
+.m-prompt image{width: 304rpx;height: 210rpx;margin: 100rpx auto 50rpx; display: block}
+.m-prompt text{ display: block;text-align: center;line-height: 30rpx;font-size: 30rpx; color: #666;}
+.btn-gui{position: absolute;opacity: 0; height: 100%;width: 100%;z-index: 100;}

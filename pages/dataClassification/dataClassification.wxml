@@ -1,0 +1,16 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<!-- <view class='g-header'>
+  <view class="m-top">
+    <view class='m-left'>
+      <image src='http://img.yaotia.com/act/arrow.png'></image>资料分类
+    </view>
+  </view>
+</view> -->
+
+<view class='m-book' wx:for="{{list}}" wx:key='uniqe' data-categoryid="{{item.categoryid}}">
+<navigator url='/pages/list/list?categoryid={{item.categoryid}}'>
+  <image src='{{item.iconurl}}'></image>
+  <text>{{item.name}}</text>
+</navigator>
+</view>

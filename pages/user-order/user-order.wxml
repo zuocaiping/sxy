@@ -1,0 +1,84 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<view class='page-body' wx:if="{{pageShow}}">
+  <view class='g-header'>
+     <view class="m-top" hidden='true'>
+      <view class='m-left'>
+        <image src='http://img.yaotia.com/act/arrow.png'></image>资料评价
+      </view>
+    </view> 
+    <view class='m-menu-list'>
+      <text class="{{status ==-1? 'active' : ''}}" data-status="-1" bindtap="tab">全部</text>
+      <text class="{{status == 0? 'active' : ''}}" data-status="0" bindtap="tab">待付款</text>
+      <text class="{{status == 2? 'active' : ''}}" data-status="2" bindtap="tab">待收货</text>
+      <text class="{{status == 8? 'active' : ''}}" data-status="8" bindtap="tab">待评价</text>
+      <!-- <text class="{{status == 3? 'active' : ''}}" data-status="3" bindtap="tab">已完成</text> -->
+    </view>
+    <view class='m-change'></view>
+  </view>
+  <view>
+    <view class='m-recommend' wx:for="{{orderList}}" wx:key='{{item.orderid}}'>
+      <view class='m-order'>订单号：{{item.orderno}}
+        <text>{{statusList[item.status]}}</text>
+      </view>
+      <view class='m-recommend-con' wx:for='{{item.books}}' wx:key="{{bitem.bookid}}" wx:for-item="bitem" wx:for-index="idx">
+        <view class='m-book'>
+          <image src='{{bitem.bookimage}}' mode=""></image>
+        </view>
+        <view class='m-con'>
+          <view class='u-name'>{{bitem.bookname}}
+            <text class='u-price'>￥{{bitem.bookprice}}</text>
+          </view>
+          <view class='u-about'>{{bitem.pages}}p
+            <text class='u-number'>x {{bitem.num}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:if='' class='m-text'>共{{item.booknum}}本资料 合计：￥{{item.payamount}}（含运费 ￥{{item.shippingfee}})</view>
+      <view class='m-text'>共{{item.booknum}}本资料 合计：￥{{item.payamount}}（含运费 ￥{{item.shippingfee}})</view>
+      <view class='m-comment'>
+
+        <view wx:if="{{item.status==0}}" class='u-evaluate u-payment' bindtap='rePay' data-orderid='{{item.orderid}}'>去支付</view>
+        <view wx:if="{{item.status==0}}" class='u-evaluate' data-index='{{index}}' bindtap="cancelOrder">取消订单</view>
+        <view wx:if="{{item.status==2}}" class='u-evaluate u-payment' bindtap='receiptOrder' data-index='{{index}}' data-orderid='{{item.orderid}}'>确认收货</view>
+        <view wx:if="{{item.status==8}}" class='u-evaluate' bindtap='jumpUrl' data-url='/pages/user/user?orderid={{item.orderid}}'>去评论</view>
+        <view wx:if="{{item.status==2||item.status==8}}" class='u-evaluate' bindtap='jumpUrl' data-url='/pages/logistics/logistics?orderid={{item.orderid}}'>查看物流</view>
+      </view>
+
+    </view>
+    <view class="modal-box" hidden="{{rule}}">
+      <view class="modal-body rule-body">
+        <view class="modal-content">
+          你要取消并删除订单吗
+        </view>
+        <view class="modal-title">
+          <view bindtap="hide1" class='u-cancel'>取消</view>
+          <view bindtap="doCancelOrder" class='u-sure'>确定</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='m-prompt' wx:if="{{orderList==''}}">
+      <image src='http://img.yaotia.com/act/noContent1.png'></image>
+      <text>暂无订单</text>
+    </view>
+  </view>
+
+</view>
+
+<view class="m-home">
+<view>
+  <navigator open-type="redirect" url="/pages/guideMap/guideMap">
+    <image src="http://img.yaotia.com/act/home.png?v=1"></image>
+    <text>    首页    </text>
+  </navigator>
+</view>
+  <!-- <view class='m-printing-img'> -->
+  <view>
+      <button open-type="contact">
+        <image src='http://img.booktopaper.com/mini/kf.png'></image>
+        <text>    客服    </text>
+      </button>
+  </view>
+    <!-- </view> -->
+</view>

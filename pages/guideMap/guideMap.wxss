@@ -1,0 +1,113 @@
+/* pages/list/list.wxss */
+page{padding-bottom:160rpx;}
+navigator{display: inline-block;}
+.m-loading{text-align: center;margin-top:20%;}
+.m-top-1{position: relative;padding-left:19rpx; line-height: 58rpx;background: #fff; }
+.m-top-1 .m-left{font-size: 36rpx;color: #242424; }
+.m-top-1 .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.u-bold{font-weight: bold;color: #ec2c2c;}
+.u-receive{ font-weight: normal; color: #cecece;font-size: 25rpx;text-decoration: underline;}
+.m-search{position: absolute;right:12rpx;font-size:24rpx; line-height: 58rpx; color:#999;width: 254rpx;border-radius:40rpx;height: 58rpx;background: #f7f7f7;top:0;padding:0 15rpx 0 60rpx;}
+.m-search input{height: 58rpx; line-height: 58rpx;}
+.m-search image{width: 24rpx;height: 24rpx;position: absolute;top:50%;margin-top:-12rpx;left:17rpx;}
+
+
+/**首页css**/
+.m-top{position:fixed; width: 100%;left: 0;top:0; z-index: 10;background: #fff; padding-left:39rpx;padding-bottom:11rpx;line-height: 58rpx; }
+.m-top .m-left{font-size: 26rpx;}
+.m-top .m-left image{width:25rpx;height:28rpx;margin: 16rpx 10rpx 0 0; vertical-align: top;}
+.u-bold{font-weight: bold;color: #ec2c2c;}
+.u-receive{color: #ec2c2c;font-size: 25rpx;text-decoration: underline;}
+.m-search{position: absolute;right:46rpx;font-size:24rpx; line-height: 58rpx; color:#999;width: 254rpx;border-radius:40rpx;height: 58rpx;background: #f7f7f7;top:0;padding:0 15rpx 0 60rpx;}
+.m-search image{width: 24rpx;height: 24rpx;position: absolute;top:50%;margin-top:-12rpx;left:17rpx;}
+.m-banner{height: 350rpx;margin-bottom:45rpx;margin-top:73rpx;}
+.m-banner image{width: 100%;height: 350rpx;}
+.m-data image{width: 145rpx;height: 183rpx; float: left;margin-right: 25rpx;}
+.m-data{overflow: hidden;margin-bottom:82rpx; position: relative;}
+.m-data text{float: left;border-right:2rpx solid #cbcbcb;border-left:2rpx solid #cbcbcb;width: 25rpx;padding:0 20rpx; display: block;font-size: 28rpx;line-height: 46rpx; color: #989898;margin: 0 28rpx;}
+.m-img{width: 999rpx;}
+.m-title{border-top: 1px solid #e6e6e6;  width: 255rpx; padding:0 45rpx; margin:0 auto 28rpx; text-align: center;display: block;}
+.m-title text{font-size: 28rpx;font-weight: bold;color: #242424;background:#fff;margin-top:-25rpx; position: relative;z-index: 2; display: block;}
+.m-title1{position: relative;padding-left: 32rpx;height: 70rpx;}
+.m-title1 .u-left{font-size: 34rpx; color: #242424; position: relative;}
+.m-title1 .u-left text{position: absolute;left: 0;color: #bcbbbb;font-size: 24rpx;top:-30rpx;}
+.m-title1 .u-left image{width: 46rpx;height: 46rpx; vertical-align: top;margin-top:-4rpx;}
+.m-specifications{color: #b0afaf;font-size: 24rpx;}
+.m-specifications image{width:42rpx;height:42rpx;margin: -4rpx 0 0 20rpx; vertical-align: top;}
+.u-more{border: 1px solid #eaeaea;font-size: 22rpx;color: #b9b9b9;border-radius: 30rpx;width: 88rpx;height: 42rpx;display: inline-block; text-align: center;line-height: 42rpx; position: absolute;right:35rpx;top:0;}
+/* .m-book{background: #f3f2f2;border-radius: 20rpx;width:300rpx;height: 280rpx; float: left;margin:0 30rpx 0 20rpx; position: relative; }
+.m-book image{width: 157rpx;height: 246rpx; margin: 20rpx auto 0; display: block;} */
+.m-book{border-radius: 20rpx;width:300rpx;height: 280rpx; float: left;margin:0 30rpx 0 20rpx; position: relative; }
+.m-book image{border-radius: 20rpx;width:300rpx;height: 280rpx; margin: 0rpx auto 0; display: block;}
+.m-book text{width:50rpx;height: 50rpx;border-radius: 50%;text-align: center;line-height: 50rpx;font-size: 16rpx;color: #fff; position: absolute;right:24rpx;top:-25rpx; display: block;background: #fdb73c;}
+.m-recommend-con{display: flex;margin-bottom:60rpx; }
+.m-con{flex: 1;margin-right: 30rpx;}
+.m-con text{display: block;}
+.u-name{font-size: 32rpx; line-height: 36rpx; color: #333;margin-bottom: 18rpx;}
+ .u-about{font-size: 26rpx; line-height: 32rpx;color: #b0afaf;margin-bottom: 20rpx;height: 63rpx;max-width: 339rpx;
+ display:-webkit-box; float: left;
+word-break:break-all;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.u-author{font-size: 26rpx; color: #262626;}
+.u-author image{width: 53rpx;height: 49rpx; vertical-align: top;margin: -2rpx 0 0 -15rpx;}
+.u-link{width:130rpx;height: 53rpx;border-radius: 50rpx;background: #5acc82; text-align: center; line-height: 53rpx;color: #fff;font-size: 26rpx;font-weight: bold;}
+.m-tab-title{ position: relative; display: flex;padding: 20rpx 0 10rpx; position: fixed;width: 100%;background: #fff;bottom: 0;left: 0;z-index: 1000;}
+.m-tab-title view{flex: 1;text-align: center;font-size: 30rpx;color: #767676; line-height: 50rpx;position: relative;}
+.m-tab-title .u-new{width: 30rpx;height: 30rpx; font-size: 20rpx; color: #fff;border:2rpx solid #fff;border-radius: 50%;display: inline-block;position: absolute;background: #ef1d1d;font-weight: bold;line-height: 30rpx;top:-10rpx;left:50%;margin-left: 5rpx;}
+.m-tab-title image{width: 64rpx;height: 64rpx; display: block;margin: 0 auto;}
+.m-tab-title .u-spot{width: 10rpx;margin:5rpx 0 0 15rpx;height:10rpx;background: red;border-radius:50%;display: inline-block;position: absolute;}
+/*授权登录弹框*/
+ 
+/*mask*/
+.drawer_title image{width: 70rpx;height: 70rpx;vertical-align: top;margin:0 20rpx 0 0; }
+.drawer_screen { 
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ z-index: 1000; 
+ background: #000; 
+ opacity: 0.5; 
+ overflow: hidden; 
+} 
+  
+/*content*/
+.drawer_box { 
+ width: 650rpx; 
+ overflow: hidden; 
+ position: fixed; 
+ top: 50%; 
+ left: 0; 
+ z-index: 1001; 
+ background: #FAFAFA; 
+ margin: -150px 50rpx 0 50rpx; 
+ border-radius: 10rpx; 
+} 
+  
+.drawer_title{ 
+ padding:100rpx 15px; 
+ font: 24rpx "microsoft yahei"; 
+ text-align: center; 
+ line-height: 70rpx;
+} 
+
+  
+.btn_ok{ 
+ padding: 10px; 
+ font: 24rpx "microsoft yahei"; 
+ text-align: right; 
+ border-top: 1px solid #E8E8EA; 
+ color: #3CC51F; line-height: 60rpx;margin: 0 40rpx;
+} 
+
+
+.scroll-view_H{position: absolute;right: 0;height: 183rpx;
+  width: 100%; 
+  white-space: nowrap;
+}
+.btn-gui{position: absolute;opacity: 0; height: 100%;width: 100%;z-index: 100;}

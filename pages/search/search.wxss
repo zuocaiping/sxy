@@ -1,0 +1,35 @@
+page{padding-top:90rpx;}
+.m-top{position: relative;padding-left:39rpx;padding-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.m-book{border-radius: 20rpx;width:220rpx;height: 206rpx; float: left;margin:0 30rpx 0 40rpx; position: relative; }
+.m-book image{width:220rpx;height: 206rpx; margin: 28rpx auto 0; display: block;}
+.m-book text{width:50rpx;height: 50rpx;border-radius: 50%;text-align: center;line-height: 50rpx;font-size: 16rpx;color: #fff; position: absolute;right:1rpx;top:1rpx; display: block;background: #fdb73c;}
+.m-recommend{background: #fff;padding-top:40rpx;padding-bottom:20rpx;}
+.m-recommend-con{display: flex;margin-bottom: 60rpx;}
+.m-con{flex: 1;margin-right: 30rpx;}
+.m-con text{display: block;}
+.u-name{font-size: 30rpx; color: #333;margin-bottom: 12rpx;margin-top:10rpx;}
+.u-about{font-size: 24rpx; line-height: 32rpx;color: #b0afaf;margin-bottom: 20rpx;}
+.u-author{font-size: 24rpx; color: #b0afaf;margin-bottom: 0rpx;}
+.u-author image{width: 53rpx;height: 49rpx; vertical-align: top;margin: -6rpx 0 0 -15rpx;}
+.u-link{width:130rpx;height: 53rpx;border-radius: 50rpx;background: #5acc82; text-align: center; color: #fff;font-size: 26rpx;font-weight: bold; line-height: 53rpx;}
+.m-search{padding: 38rpx 0 20rpx 40rpx; position: fixed;width: 100%;top:0;left: 0;background: #fff; z-index: 100;}
+.m-search text{font-size: 30rpx;color: #999999;line-height: 68rpx;margin-left: 22rpx;vertical-align: top;display: inline-block;}
+.m-input{background: #f0f0f0;width: 550rpx;height: 68rpx; line-height: 78rpx;border-radius: 40rpx; position: relative;padding:0 60rpx; font-size: 28rpx;color: #333333; display: inline-block;}
+.m-input.hascancel{width: 488rpx;}
+.m-input input{height: 68rpx;line-height: 68rpx;}
+.m-input image{width: 24rpx;height: 24rpx; position: absolute;left: 25rpx;top:50%;margin-top: -12rpx;}
+.m-input image.u-del{width: 34rpx;height: 34rpx;left:552rpx;top:50%;margin-top: -17rpx;}
+.m-info{font-size: 28rpx;color: #333333;margin:0 42rpx 40rpx;  }
+/*搜索结果*/
+.m-search-list{margin: 20rpx 40rpx;}
+.m-search-list image{width: 28rpx;height: 24rpx; vertical-align: top;position: absolute;left: 25rpx;top:50%;margin-top:-12rpx;}
+.m-search-list view{border-bottom:1px solid #f0f0f0;font-size: 26rpx;color: #999; line-height: 80rpx;padding-left: 70rpx; position: relative;}
+.m-search-list view text{color: #333;}
+/*历史搜索*/
+.m-history view{padding: 0;}
+.m-history image{width: 20rpx;height: 20rpx; position: absolute;right: 10rpx;left: auto}
+.m-history .u-title{border: none;color: #000000;font-size: 28rpx;}
+.mask{position: fixed; height: 100%;width: 100%; top: 0; left: 0;background-color: rgba(0, 0, 0, 0.5);z-index:100;}
+.m-search .m-search-list{margin: 20rpx 0;}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资料红包",
+  "usingComponents": {
+    "signup": "../../../components/signup/signup"
+  }
+}

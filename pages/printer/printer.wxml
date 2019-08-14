@@ -1,0 +1,42 @@
+<view wx:if="{{pageShow}}">
+  <view class='m-data'>
+    <view class='m-info'>
+      <image src='http://img.yaotia.com/act/printing1.png'></image>你有
+      <text>{{cartNum}}</text> 本资料待打印
+    </view>
+    <checkbox-group bindchange="checkChange">
+      <view class='m-recommend-con' wx:for="{{cartList}}" wx:key="{{item.cartid}}">
+        <label class="checkbox">
+          <checkbox value="{{index}}" checked="{{checkAll||item.checked}}" />
+          <view class='m-book'>
+            <image src='{{item.bookimage}}' mode="{{item.mode}}"></image>
+          </view>
+          <view class='m-con'>
+            <view class='u-name'>{{item.bookname}}
+            </view>
+            <view class='u-about'>{{item.bookusefor}}
+              <text>{{item.bookpages}}页</text>
+            </view>
+          </view>
+        </label>
+        <image bindtap='delCommodity' data-cartid="{{item.cartid}}" data-index="{{index}}" class='u-del' src='http://img.yaotia.com/act/del2.png'></image>
+      </view>
+    </checkbox-group>
+  </view>
+
+
+
+
+  <view class='m-fun'>
+    <checkbox-group bindchange="checkAll" style="display:inline-block;">
+      <label class="checkbox">
+        <checkbox value='1' checked='{{checkAll}}' />全选
+      </label>
+    </checkbox-group>
+    <navigator hover-class="none" url="/pages/guideMap/guideMap">
+       <view class="m-join"data-id="5">再加一本</view>
+    </navigator>
+    <view class='m-btn' bindtap='goOrder'>立即打印</view>
+  </view>
+  <signup show="{{showSignUp}}" successcb="{{signupcb}}"></signup>
+</view>

@@ -1,0 +1,39 @@
+.m-banner{height: 350rpx;}
+.m-banner image{width: 100%;height: 350rpx;}
+.m-user{position: relative;padding-left:134rpx;margin: -60rpx 0 0 22rpx; z-index: 20;}
+.m-user image.head{width: 105rpx;height: 105rpx;border-radius: 50rpx;border:1px solid #d9d9d9; position: absolute;left: 0;top:10rpx;}
+.m-user .u-title{font-size: 36rpx; line-height: 50rpx;margin-bottom:20rpx;  color: #fff;font-weight: bold;display: block;text-shadow: 1px 1px 1px #040000;}
+.m-user .u-about{font-size: 26rpx;color: #999; display: block;padding-top:5rpx;}
+.m-fans{font-size: 24rpx;color: #fff;text-shadow: 1px 1px 1px #040000; position: absolute;right:27rpx;top:10rpx; }
+.m-fans image{width: 24rpx;height: 32rpx; vertical-align: top;margin: 5rpx 8rpx 0 0;}
+.m-author-about{font-size: 26rpx; line-height: 42rpx; color: #333333;border-bottom:20rpx solid #ebeeef;padding: 80rpx 36rpx 40rpx;}
+.m-top{position: relative;padding-left:39rpx;padding-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.m-printing{text-align: center;background: #fff;padding:78rpx 0 64rpx;}
+.m-printing image{width: 392rpx;height: 204rpx;}
+.m-printing text{font-size: 28rpx;color: #d7e0e2;display: block;margin: 30rpx 0 50rpx;}
+.m-printing .m-btn{width: 213rpx;height: 66rpx;border: 1px solid #5acc82;border-radius: 40rpx; text-align: center; line-height: 66rpx;color: #5acc82;font-size: 30rpx;margin: 0 auto;}
+.m-title{border-top: 1px solid #e6e6e6;  width: 255rpx; padding:0 45rpx; margin:65rpx auto 48rpx; text-align: center;display: block;}
+.m-title text{font-size: 32rpx;color: #bcbbbb;background:#ebeeef;margin-top:-23rpx; position: relative;z-index: 2; display: block;}
+.m-book{background: #f3f2f2;border-radius: 20rpx;width:300rpx;height: 280rpx; float: left;margin:0 30rpx 0 20rpx; position: relative; }
+.m-book image{width: 157rpx;height: 246rpx; margin: 20rpx auto 0; display: block;}
+.m-book text{width:50rpx;height: 50rpx;border-radius: 50%;text-align: center;line-height: 50rpx;font-size: 16rpx;color: #fff; position: absolute;right:24rpx;top:-25rpx; display: block;background: #fdb73c;}
+.m-recommend{background: #fff;padding-top:60rpx;padding-bottom:20rpx;border-bottom:20rpx solid #ebeeef;}
+.m-recommend-con{display: flex;margin-bottom: 60rpx;}
+.m-con{flex: 1;margin-right: 30rpx;}
+.m-con text{display: block;margin-top:40rpx;}
+.m-con{flex: 1;margin-right:40rpx; position: relative; }
+.u-name{font-size: 36rpx; color: #333;margin-bottom: 16rpx; line-height: 46rpx;}
+.u-name image{width: 30rpx;height:32rpx;position: absolute;right: -60rpx;top:8rpx;}
+.u-about{font-size: 30rpx; line-height: 32rpx;color: #b0afaf;}
+.u-about image{width: 53rpx;height: 49rpx; vertical-align: top;margin:-6rpx 0 0 -10rpx; }
+.u-author image{width: 53rpx;height: 49rpx; vertical-align: top;margin: -2rpx 0 0 -15rpx;}
+.u-link{width:130rpx;height: 53rpx;border-radius: 50rpx;background: #5acc82; text-align: center; line-height: 53rpx;color: #fff;font-size: 26rpx;font-weight: bold;}
+.m-recom-title{font-size: 30rpx;color: #333;font-weight: bold;margin: -25rpx 40rpx 50rpx;}
+.m-curriculum-block{	width:100%;overflow: hidden;padding-left:25rpx;}
+.m-curriculum{margin-right: 20rpx; width: 340rpx; float: left; display: block;flex: 1;margin-bottom:38rpx;}
+.m-curriculum .u-name{font-size: 30rpx;color: #333; display: block;width: 100%;margin-top:18rpx; }
+.m-curriculum .m-book{width: 100%;margin: 0;display: block;float: none;overflow: hidden;}
+.m-follow{height: 110rpx;text-align: center;font-size: 36rpx;color: #4a576a; line-height: 110rpx;font-weight: bold;}
+.m-follow image{width: 43rpx;height: 43rpx;margin-right: 22rpx;vertical-align: top;margin-top:37rpx;}

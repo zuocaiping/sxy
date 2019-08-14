@@ -1,0 +1,34 @@
+{
+  "pages": [    
+    "pages/guideMap/guideMap",
+    "pages/share/share",
+    "pages/printer/printer",
+    "pages/author/author",   
+    "pages/coupon/coupon",
+    "pages/dataClassification/dataClassification",
+    "pages/search/search",
+    "pages/printing/printing",
+    "pages/confirmOrder/confirmOrder",
+    "pages/user-order/user-order",
+    "pages/user/user",
+    "pages/confirmAddress/confirmAddress",
+    "pages/address/address",
+    "pages/payment/payment",
+    "pages/logistics/logistics",
+    "pages/me/me",
+    "pages/myAddress/myAddress",
+    "pages/collection/collection",
+    "pages/list/list",
+    "pages/details/details",
+    "pages/protocol/protocol",
+    "pages/address-confirmation/address-confirmation",
+    "pages/signin/signin"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

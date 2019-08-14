@@ -1,0 +1,24 @@
+/* pages/list/list.wxss */
+page{padding-bottom:204rpx; }
+.addrpicker-box{position: fixed; top: 0; left: 0;width: 100%;height: 100%; z-index: 10; background-color: #fff;}
+ .m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.m-defaultAddress{background:#f9f9f9;border-radius:30rpx;margin:33rpx 30rpx;padding: 30rpx 26rpx 46rpx 42rpx; position: relative;}
+.m-defaultAddress .u-name{font-size: 34rpx; font-weight: bold;color: #000000;margin-bottom: 30rpx;}
+.m-defaultAddress .u-name .u-default{border:2px solid #efd4c4;width: 66rpx;height: 32rpx;border-radius: 30rpx;display: inline-block;font-size: 22rpx; color: #df945e; text-align: center; line-height: 32rpx;font-weight: normal;margin-left: 42rpx;}
+.m-defaultAddress .u-name  image{width: 26rpx;height: 28rpx;float: right;margin-top:10rpx; }
+.m-defaultAddress .u-text{font-size: 28rpx;color: #4c4c4c; line-height: 36rpx; display: block;}
+.m-defaultAddress .m-fun{font-size: 26rpx;color: #4c4c4c;margin-top: 40rpx; position: relative;}
+.m-defaultAddress .m-fun label{line-height: 40rpx;}
+.m-defaultAddress .m-btn-default{background: #5acc82;width: 160rpx;height: 70rpx;font-size: 26rpx;color: #fff; text-align: center; line-height: 70rpx;border-radius: 40rpx;position: absolute;right:0rpx;bottom:-15rpx;}
+.m-defaultAddress radio{transform:scale(0.7); vertical-align: top;margin:-5rpx 0 0 -5rpx; position: absolute;left:18rpx;top:118rpx;  }
+.m-defaultAddress .m-btn{width: 556rpx;height: 86rpx;border:2rpx solid #5acc82;border-radius: 50rpx; margin: 76rpx auto 34rpx;color: #5acc82;font-size: 34rpx;text-align: center; line-height: 86rpx;font-weight: bold;}
+.m-defaultAddress .m-white{background: none;} 
+/**还未填写地址**/
+.m-btn1{width: 556rpx;height: 86rpx;border:2rpx solid #5acc82;border-radius: 50rpx; margin: 76rpx auto 34rpx;color: #5acc82;font-size: 34rpx;text-align: center; line-height: 86rpx;font-weight: bold; position: fixed;bottom:20rpx;left:50%;margin-left: -278rpx;}
+.m-user{text-align: center;font-size: 36rpx; color: #cccccc; line-height: 46rpx;position: absolute;top:30%;width: 100%;}
+.m-user text{display: block;margin-top:40rpx;}
+.m-user image{width: 56rpx;height: 64rpx;}
+.hide-btn{position: absolute; top:40rpx;right: 40rpx; display: inline-block; color: green; border: 2rpx;font-size: 26rpx;}
+.m-btn-block{width: 100%;background: #fff;position: fixed;bottom:0;height: 204rpx;}

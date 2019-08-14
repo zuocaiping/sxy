@@ -1,0 +1,157 @@
+<!--pages/list/list.wxml-->
+<!--我的订单——已评价-->
+<view class='page-body' wx:if="{{pageShow}}">
+  <view class='g-header'>
+    <view class="m-top" hidden='true'>
+      <view class='m-left'>
+        <image src='http://img.yaotia.com/act/arrow.png'></image>打印订单确认
+      </view>
+    </view>
+  </view>
+  <view class='m-address' bindtap='showAddrPicker'>
+    <view class='address' wx:if='{{shippingAddr!=null}}'>发货至：
+      <text>{{shippingAddr.name}}</text> {{addrStr}}
+      <view class='phone'>{{shippingAddr.mobile}}</view>
+    </view>
+    <view wx:else class='address'>请选择地址</view>
+
+    <image src='http://img.yaotia.com/act/icon-8.png'></image>
+  </view>
+  <view class="letter-box">
+    <view class="letter-border">
+    </view>
+  </view>
+
+
+
+
+
+  <view class='m-data'>
+    <view class='m-recommend-con' wx:for="{{bookList}}" wx:key="uniqe">
+      <view class='m-book'>
+        <image src='{{item.bookimage}}' mode=""></image>
+      </view>
+      <view class='m-con'>
+        <view class='u-name'>{{item.bookname}}
+          <text class='u-price'>{{item.bookpage}}页</text>
+        </view>
+        <view class='u-about'>× {{item.booknum}}</view>
+      </view>
+    </view>
+    <view class='m-text'>
+      <text class='u-left'>共{{bookNum}}份资料</text>
+      <text class='u-right'>合计：{{totalPages}}页</text>
+    </view>
+
+  </view>
+
+  <view class='m-bc m-block2'>
+    <view class='m-list' wx:if="{{cards.length>0}}" bindtap="show">
+      <view wx:if="{{useCardIndex==-1}}">
+        <text class='u-info'>优惠券（{{cards.length}}）</text>
+        <text>不使用优惠券</text>
+      </view>
+      <view wx:else>
+        <text class='u-info'>优惠券（{{cards.length}}）</text>
+        <text>{{cards[useCardIndex].title}}</text>
+        <text class='u-green'>-{{cards[useCardIndex].pages}}页</text>
+      </view>
+    </view>
+    <view class='m-list' wx:if="{{freePages>0}}">
+      <text class='u-info'>免费页数（{{freePages}}）</text>
+      <text>免费打印扣除</text>
+      <text class='u-green'>-{{useFreePages}}页</text>
+    </view>
+  </view>
+
+  <view class='m-bc'>
+    <view class='m-list'>
+      <text>打印成本费</text>
+      <text class='u-paper'>{{payPages}}页 x {{pagePriceMoney}}元 （纸+打印）</text>
+      <view class='u-price1'>
+        <text>￥{{pageMoney}}</text>
+      </view>
+    </view>
+    <view class='m-list'>
+      <text>封面装订</text>
+      <text class='u-paper'>{{bindCoverText}}</text>
+      <view class='u-price1'>
+        <text>￥{{coverBindMoney}}</text>
+      </view>
+    </view>
+    <view class='m-list'>
+      <text>快递费</text>
+      <view class='u-paper u-color' wx:if='{{areaCanFree}}'>满{{freeShippingLimit}}页包邮，还差{{freeShippingLimit-totalPages}}页，
+        <view bindtap='_btnLike' class='_list'>去凑单吧</view>
+      </view>
+      <view class='u-paper u-color' wx:if='{{shIsFree}}'>已达成满{{freeShippingLimit}}页包邮条件</view>
+      <view class='u-price1'>
+        <text>￥{{shippingMoney}}</text>
+      </view>
+    </view>
+    <view class='m-list'>
+      <view class='u-price1'>合计：
+        <text>￥{{totalMoney}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='m-bc'>
+    <view class='m-list' wx:if="true">
+      <label class="checkbox">
+        <checkbox checked="{{isUseBuzhi}}" bindtap="changeUseBuzhiCoin" />使用步知币
+        <text>{{buzhiMoney}}</text>
+      </label>
+      <view class='m-rule' bindtap="show1">!</view>
+      <text class='u-green'>-¥{{useBuzhiMoney}}</text>
+    </view>
+    <view class='m-radio'>
+      <label class="checkbox">
+        <checkbox checked="true" />我已同意</label>
+      <navigator url='/pages/protocol/protocol'>
+        <text>《书小页打印社服务协议》</text>
+      </navigator>
+    </view>
+  </view> 
+  <view class='m-address-text' wx:if="{{shippingAddr!=null && screenHeight1 == 0 }}">发货至：{{shippingAddr.name}} {{addrStr}} {{shippingAddr.mobile}}</view>
+  <view class='m-fun'>
+    <view class='m-btn' bindtap='goPay'>去付款</view>
+    <view class='u-text'>
+      <text>实付：￥{{payMoney}}</text>
+    </view>
+  </view>
+  <signup show="{{showSignUp}}" successcb="{{signupcb}}"></signup>
+  <addrpicker wx:if='{{showAddrPicker}}' bind:pickAddr="getAddr" ispick='true' bind:pickAddr="getAddr"></addrpicker>
+</view>
+
+<view class="modal-box" hidden="{{flag}}" wx:if="{{cards.length>0}}">
+  <view class="modal-body">
+    <view class="modal-title">
+      <view bindtap="hide" class='u-cancel'>取消</view> 优惠券（{{cards.length}}）
+      <view bindtap="changeCard" class='u-sure'>确定</view>
+    </view>
+    <view class="modal-content">
+      <view class='modal-list' wx:for="{{cards}}" wx:key="uniqe">{{item.title}}
+        <text>{{item.showexpire}}</text>
+        <label class="checkbox">
+          <checkbox data-index='{{index}}' checked="{{selectCardIndex==index}}" bindtap='pickCard' />
+        </label>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="modal-box" hidden="{{rule}}">
+  <view class="modal-body rule-body">
+    <view class="modal-content">
+      <view class='title'>步知币使用规则</view>
+      <text>书小页支持步知公考账号登录，步知币可
+当做现金抵扣打印费</text>
+      <view>1步知币 = 1元人民币</view>
+    </view>
+    <view class="modal-title">
+      <view bindtap="hide1" class='u-cancel'>取消</view>
+      <view bindtap="hide1" class='u-sure'>确定</view>
+    </view>
+  </view>
+</view>

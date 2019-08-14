@@ -1,0 +1,39 @@
+/* pages/list/list.wxss */
+.g-header{background: #fff;margin-bottom:80rpx;}
+.m-top{position: relative;padding-left:39rpx;margin-bottom:11rpx;line-height: 58rpx;background: #fff; }
+.m-top .m-left{font-size: 36rpx;color: #242424; }
+.m-top .m-left image{width:18rpx;height:32rpx;margin: 14rpx 10rpx 0 0; vertical-align: top;}
+.m-tab-title{display: flex;padding: 20rpx 0 10rpx;}
+.m-tab-title view{flex: 1;text-align: center;font-size: 30rpx;color: #767676; line-height: 50rpx;position: relative;}
+.m-tab-title .u-new{width: 30rpx;height: 30rpx; font-size: 20rpx; color: #fff;border:2rpx solid #fff;border-radius: 50%;display: inline-block;position: absolute;background: #ef1d1d;font-weight: bold;line-height: 30rpx;top:-10rpx;left:50%;margin-left: 5rpx;}
+.m-tab-title image{width: 58rpx;height: 58rpx; display: block;margin: 0 auto;}
+
+.m-menu-list{ text-align: left;padding-left: 20rpx;}
+.m-menu-list text{font-size: 28rpx; color: #989898;margin: 0 15rpx;padding: 0 10rpx; display: inline-block;  line-height: 76rpx; text-align: center;}
+.m-menu-list .active{border-bottom: 4rpx solid #242424;color: #333333;}
+.m-change{background-image: -webkit-linear-gradient(top, #f6f6f6, #fff);height: 15rpx; }
+.right-item{display: none;}
+.right-item.active{display: block;}
+.m-coupon{background: url(http://img.yaotia.com/act/group-30.png);width: 680rpx;height: 220rpx;background-size: 100%;margin: 50rpx auto 0;}
+.m-green{background: url(http://img.yaotia.com/act/group-31.png);background-size: 100%;}
+.m-red{background: url(http://img.yaotia.com/act/group-22.png);background-size: 100%;}
+.m-coupon .m-left{width: 268rpx;text-align: center;font-size: 24rpx;float: left;padding-top:10rpx;}
+.m-coupon .m-left .u-number{font-size: 100rpx;color: #272727;}
+.m-coupon .m-left .u-text{font-size: 22rpx;color: #272727; display: block;}
+.m-coupon .m-right{font-size:24rpx;line-height: 34rpx;color: #272727;float: left;padding: 50rpx 0 0 52rpx;}
+.m-coupon .m-right .u-text{font-size: 30rpx;color: #272727; display: block;margin-bottom: 22rpx;}
+/*红包*/
+.m-envelopes{background: url(http://img.yaotia.com/act/group-29.png);background-size: 100%;width: 276rpx;height: 310rpx; display: inline-block;margin: 0 0 60rpx 68rpx;text-align: center;color: #fff2c4; vertical-align: top;}
+.m-envelopes text{display: block; }
+.m-envelopes .u-title{font-size: 30rpx;margin-top:24rpx;}
+.m-envelopes .u-number{font-size: 26rpx;color: #353535;margin-top: 34rpx;font-weight: bold;}
+.m-envelopes .u-text{font-size: 24rpx;margin-top: 70rpx;}
+.m-envelopes .u-doubt{font-size: 50rpx;color: #353535;font-weight: bold;margin-top: 22rpx;}
+.m-Nopoint{background: url(http://img.yaotia.com/act/group-29-1.png);background-size: 100%;}
+.m-empty image{width: 265rpx;height: 190rpx;margin: 150rpx auto; display: block;}
+.m-loading{text-align: center;padding: 100rpx 0;font-size: 30rpx;}
+/**暂无优惠券**/
+.m-prompt{background: #fff;padding:200rpx 0 300rpx;}
+.m-prompt image{width: 304rpx;height: 210rpx;margin: 100rpx auto 50rpx; display: block}
+.m-prompt text{ display: block;text-align: center;line-height: 30rpx;font-size: 30rpx; color: #666;}
+.u-btn{font-size: 34rpx;display: inline-block;padding-top: 10rpx;}

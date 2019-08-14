@@ -1,0 +1,41 @@
+<view class='address-list'>
+    <view class='g-header' hidden='true'>
+      <view class="m-top">
+        <view class='m-left'>
+          <image src='http://img.yaotia.com/act/arrow.png'></image>收货地址
+        </view>
+      </view>
+    </view>
+    <radio-group>
+      <view wx:for="{{addrList}}" wx:key="{{item.addressid}}" class="m-defaultAddress {{item.addressid==addrid?'':'m-white'}}" data-addrid='{{item.addressid}}' data-index='{{index}}' bindtap='pickAddr'>
+        <label class="radio">
+          <view class='u-name'>{{item.name}}
+            <text wx:if="{{item.isdefault==1}}" class='u-default'>默认</text>
+            <image wx:if="{{!fromOrder}}" src='http://img.yaotia.com/act/del.png' catchtap='removeAddr' data-index='{{index}}'></image>
+          </view>
+          <view class='u-text'>
+            <!-- <radio wx:if="{{ispick}}"></radio> -->
+            {{item.province}}{{item.city}}{{item.district}}{{item.address}}</view>
+          <text class='u-text'>电话：{{item.mobile}}</text>
+          <view class='m-fun'>
+            <navigator catchtap='stopPropagation' hover-class='none' url='/pages/confirmAddress/confirmAddress?addressid={{item.addressid}}'>
+              <text>修改</text>
+            </navigator>
+            <view wx:if="{{fromOrder}}" class='m-btn-default'>送货到这里</view>
+            <view wx:if="{{!fromOrder&&item.isdefault!=1}}" class='m-btn-default' data-index='{{index}}' catchtap='setDefault'>设为默认</view>
+          </view>
+        </label>
+      </view>
+    </radio-group>
+    <view class='m-user' wx:if="{{addrList.length==0}}">
+      <image src='http://img.yaotia.com/act/location.png'></image>
+      <text>主银，您的东东要寄送到哪里呢？\n填写地址，做好收货准备吧！</text>
+    </view>
+    <view class='m-btn-block'>
+      <view class='m-btn1'>
+        <navigator hover-class='none' url='/pages/confirmAddress/confirmAddress'>
+        添加一个新地址
+        </navigator>
+      </view>
+    </view>
+  </view>
